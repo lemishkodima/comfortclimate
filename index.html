@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comfort Climate</title>
+    <meta
+      name="description"
+      content="Встановлення вікон і кондиціонерів у Києві та області. Підбір, монтаж, сервіс і безкоштовна консультація."
+    />
+    <meta property="og:title" content="Comfort Climate" />
+    <meta
+      property="og:description"
+      content="Вікна та кондиціонери під ключ у Києві та області. Швидкий виїзд, монтаж і гарантія."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./og-default.svg" />
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body data-page-mode="auto">
+    <div class="site-shell">
+      <header class="site-header" id="top">
+        <div class="header-shell">
+          <a class="brand" href="./index.html" aria-label="Comfort Climate">
+            <img class="brand-logo" src="./assets/img/logo.svg" alt="Comfort Climate" />
+          </a>
+
+          <div class="mode-switch" role="tablist" aria-label="Режим сайту">
+            <span class="mode-switch__thumb" aria-hidden="true"></span>
+            <button class="mode-switch__button" type="button" data-mode="windows">
+              <span class="mode-switch__label">Вікна</span>
+            </button>
+            <button class="mode-switch__button" type="button" data-mode="conditioners">
+              <span class="mode-switch__label">Кондиціонери</span>
+            </button>
+          </div>
+
+          <nav class="site-nav" id="site-nav" aria-label="Основна навігація">
+            <a href="#hero-slide">Головна</a>
+            <a href="#services-section">Послуги</a>
+            <a href="#why-section">Чому ми</a>
+            <a href="#lead-form">Контакти</a>
+          </nav>
+
+          <div class="header-actions">
+            <a class="phone-link" href="tel:+380631944273" data-track-phone>
+              +380631944273
+            </a>
+            <button class="cta-button header-cta" type="button" data-scroll-target="#lead-form">
+              <span class="button-label">Отримати прорахунок</span>
+            </button>
+          </div>
+
+          <button class="menu-toggle" type="button" id="menu-toggle" aria-expanded="false" aria-controls="site-nav">
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+            <span class="menu-toggle__line"></span>
+          </button>
+        </div>
+      </header>
+
+      <section class="mode-chooser" id="mode-chooser" aria-label="Вибір напрямку сайту">
+        <div class="chooser-axis" aria-hidden="true">
+          <span class="chooser-axis__line"></span>
+          <div class="chooser-control">
+            <span class="chooser-control__arrow chooser-control__arrow--start"></span>
+            <img class="chooser-control__logo" src="./assets/img/logo.svg" alt="Comfort Climate" />
+            <span class="chooser-control__arrow chooser-control__arrow--end"></span>
+          </div>
+        </div>
+        <button class="chooser-half chooser-half--windows" type="button" data-choose-mode="windows" aria-label="Обрати вікна">
+          <img src="./assets/img/optimized/pexels-canshotz-36406089.webp" alt="Вікна" />
+          <span class="chooser-half__overlay"></span>
+          <span class="chooser-half__content">
+            <strong>ВІКНА</strong>
+            <small>Заміна, скління, монтаж</small>
+          </span>
+        </button>
+        <button class="chooser-half chooser-half--conditioners" type="button" data-choose-mode="conditioners" aria-label="Обрати кондиціонери">
+          <img src="./assets/img/optimized/ac-outdoor.webp" alt="Кондиціонери" />
+          <span class="chooser-half__overlay"></span>
+          <span class="chooser-half__content">
+            <strong>КОНДИЦІОНЕРИ</strong>
+            <small>Підбір, монтаж, сервіс</small>
+          </span>
+        </button>
+      </section>
+
+      <div class="page-flip-target" id="page-flip-target">
+        <main>
+          <section class="hero-section" id="hero-slide">
+            <div class="container">
+              <div class="hero-panel">
+                <div class="hero-copy">
+                  <span class="eyebrow" id="hero-eyebrow"></span>
+                  <h1 id="hero-title"></h1>
+                  <p class="hero-subtitle" id="hero-subtitle"></p>
+
+                  <div class="hero-actions">
+                    <button class="cta-button" type="button" data-scroll-target="#lead-form" id="hero-cta"></button>
+                    <button class="ghost-button" type="button" data-scroll-target="#why-section" id="hero-secondary"></button>
+                  </div>
+
+                  <div class="hero-stats" id="hero-stats"></div>
+                </div>
+
+                <div class="hero-media" id="hero-media"></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section promo-section" id="promo-section">
+            <div class="container">
+              <div class="promo-banner">
+                <div class="promo-copy">
+                  <span class="promo-badge" id="promo-badge"></span>
+                  <h2 id="promo-title"></h2>
+                  <p id="promo-text"></p>
+                </div>
+                <div class="promo-side">
+                  <div class="promo-discount" id="promo-discount"></div>
+                  <button class="cta-button promo-cta" type="button" data-scroll-target="#lead-form" id="promo-cta"></button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section services-section" id="services-section">
+            <div class="container">
+              <div class="section-heading centered">
+                <span class="section-accent"></span>
+                <h2 id="services-title"></h2>
+              </div>
+              <div class="service-grid" id="services-grid"></div>
+            </div>
+          </section>
+
+          <section class="section why-section" id="why-section">
+            <div class="container">
+              <div class="why-panel">
+                <div class="why-copy">
+                  <span class="section-accent section-accent--light"></span>
+                  <span class="section-label section-label--dark" id="why-kicker">Чому ми</span>
+                  <h2 id="why-title"></h2>
+                  <p id="why-text"></p>
+                  <ul class="why-list" id="why-list"></ul>
+                </div>
+                <div class="why-media">
+                  <img id="why-image" src="./assets/img/ac-outdoor.jpg" alt="" loading="lazy" />
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="section reviews-section" id="reviews-section">
+            <div class="container">
+              <div class="section-heading">
+                <span class="section-accent"></span>
+                <h2 id="reviews-title"></h2>
+                <p id="reviews-subtitle"></p>
+              </div>
+
+              <div class="reviews-slider" id="reviews-slider">
+                <button class="reviews-slider__arrow reviews-slider__arrow--prev" type="button" id="reviews-prev" aria-label="Попередній відгук">
+                  <span aria-hidden="true">‹</span>
+                </button>
+                <div class="reviews-slider__viewport">
+                  <div class="reviews-slider__track" id="reviews-track"></div>
+                </div>
+                <button class="reviews-slider__arrow reviews-slider__arrow--next" type="button" id="reviews-next" aria-label="Наступний відгук">
+                  <span aria-hidden="true">›</span>
+                </button>
+              </div>
+
+              <div class="reviews-slider__dots" id="reviews-dots" aria-label="Навігація по відгуках"></div>
+            </div>
+          </section>
+
+          <section class="section faq-section" id="faq-section">
+            <div class="container">
+              <div class="section-heading">
+                <span class="section-accent"></span>
+                <h2 id="faq-title"></h2>
+                <p id="faq-subtitle"></p>
+              </div>
+              <div class="faq-list" id="faq-list"></div>
+            </div>
+          </section>
+
+          <section class="section contact-section" id="lead-form">
+            <div class="container">
+              <div class="contact-panel">
+                <div class="contact-card">
+                  <div class="contact-card__icon" aria-hidden="true"></div>
+                  <span class="contact-card__eyebrow">Потрібна допомога?</span>
+                  <h2 id="lead-title"></h2>
+                  <p id="lead-subtitle"></p>
+                  <a class="cta-button contact-call" href="tel:+380631944273" data-track-phone id="lead-call-button">
+                    <span class="button-label">Зателефонувати</span>
+                  </a>
+                </div>
+
+                <form class="lead-form" id="callback-form">
+                  <input type="hidden" name="mode" id="lead-mode" />
+                  <input type="hidden" name="lead_type" id="lead-type" />
+                  <input type="hidden" name="utm_source" id="utm-source" />
+                  <input type="hidden" name="utm_campaign" id="utm-campaign" />
+                  <input type="hidden" name="utm_medium" id="utm-medium" />
+                  <input type="hidden" name="gclid" id="lead-gclid" />
+                  <input type="text" name="company" class="honeypot" tabindex="-1" autocomplete="off" />
+
+                  <label class="field field-half">
+                    <span>Ваше ім'я</span>
+                    <input type="text" name="name" placeholder="Ваше ім'я" required />
+                  </label>
+
+                  <label class="field field-half">
+                    <span>Номер телефону</span>
+                    <input type="tel" name="phone" placeholder="+380..." required />
+                  </label>
+
+                  <label class="field field-full">
+                    <span>Послуга</span>
+                    <select name="service" id="lead-service"></select>
+                  </label>
+
+                  <label class="field field-full">
+                    <span>Повідомлення</span>
+                    <textarea name="details" id="lead-message" rows="5" placeholder=""></textarea>
+                  </label>
+
+                  <button class="cta-button submit-button" type="submit" id="lead-submit"></button>
+                  <p class="form-feedback" id="form-feedback" role="status" aria-live="polite"></p>
+                </form>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="site-footer">
+          <div class="container footer-shell">
+            <div>
+              <img class="footer-logo" src="./assets/img/logo.svg" alt="Comfort Climate" />
+              <p>Київ та Київська область</p>
+            </div>
+            <div>
+              <strong>Контакти</strong>
+              <a href="tel:+380631944273">+380631944273</a>
+              <a href="mailto:hello@comfortclimate.ua">hello@comfortclimate.ua</a>
+            </div>
+            <div>
+              <strong>Графік</strong>
+              <p>Пн-Сб, 09:00-19:00</p>
+              <p>Виїзд на замір за домовленістю</p>
+            </div>
+            <div>
+              <strong>Документи</strong>
+              <a href="./privacy.html">Політика конфіденційності</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <button class="floating-cta" type="button" data-scroll-target="#lead-form" id="floating-cta">
+        <span class="button-label">Отримати прорахунок</span>
+      </button>
+
+      <aside class="cookie-banner" id="cookie-banner" hidden>
+        <div>
+          <strong>Файли cookie</strong>
+          <p>Використовуємо cookie для аналітики, збереження режиму та коректної роботи сайту.</p>
+        </div>
+        <div class="cookie-actions">
+          <button class="secondary-button" type="button" data-consent="denied">Лише необхідні</button>
+          <button class="cta-button" type="button" data-consent="granted">Прийняти</button>
+        </div>
+      </aside>
+    </div>
+
+    <script src="./script.js" defer></script>
+  </body>
+</html>
