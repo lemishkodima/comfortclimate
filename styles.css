@@ -1752,6 +1752,21 @@ body.chooser-open.chooser-selecting .site-header {
 }
 
 @media (max-width: 900px) {
+  .services-section,
+  .why-section,
+  .reviews-section,
+  .contact-section,
+  .site-footer {
+    content-visibility: visible;
+    contain-intrinsic-size: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
   .container {
     width: min(calc(100% - 28px), 100%);
   }
@@ -1979,6 +1994,10 @@ body.chooser-open.chooser-selecting .site-header {
   .footer-shell {
     gap: 18px;
     padding: 24px;
+  }
+
+  .site-footer {
+    padding-bottom: 96px;
   }
 
   .floating-cta {
