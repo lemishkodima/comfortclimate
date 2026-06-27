@@ -655,12 +655,17 @@ body.mode-windows .hero-section::before {
   pointer-events: none;
   opacity: 0.92;
   filter: drop-shadow(0 10px 24px var(--orbit-shadow));
+  transform-origin: 50% 50%;
+  backface-visibility: hidden;
 }
 
 .orbit-text svg {
   width: 100%;
   height: 100%;
   overflow: visible;
+  transform-origin: 50% 50%;
+  transform-box: fill-box;
+  backface-visibility: hidden;
 }
 
 .orbit-text text {
@@ -689,6 +694,16 @@ body.mode-windows .hero-section::before {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes orbitGlow {
+  0%,
+  100% {
+    opacity: 0.88;
+  }
+  50% {
+    opacity: 1;
   }
 }
 
@@ -1055,6 +1070,11 @@ body.mode-windows .hero-section::before {
   border: 1px solid var(--surface-line);
   box-shadow: var(--shadow-soft);
   overflow: hidden;
+  transition: border-color 260ms ease, box-shadow 260ms ease, transform 260ms ease;
+}
+
+.faq-item[open] {
+  box-shadow: 0 20px 44px rgba(17, 43, 89, 0.1);
 }
 
 .faq-item summary {
@@ -1066,6 +1086,7 @@ body.mode-windows .hero-section::before {
   font-size: 1.15rem;
   font-weight: 700;
   color: var(--text);
+  transition: color 220ms ease;
 }
 
 .faq-item summary::-webkit-details-marker {
@@ -1099,11 +1120,15 @@ body.mode-windows .hero-section::before {
 .faq-item__content {
   display: grid;
   grid-template-rows: 0fr;
-  transition: grid-template-rows 260ms ease;
+  opacity: 0.28;
+  transition:
+    grid-template-rows 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
 }
 
 .faq-item[open] .faq-item__content {
   grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .faq-item p {
@@ -1114,6 +1139,16 @@ body.mode-windows .hero-section::before {
   color: var(--muted);
   line-height: 1.7;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition:
+    transform 420ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 220ms ease;
+}
+
+.faq-item[open] p {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .contact-card {
@@ -1164,6 +1199,7 @@ body.mode-windows .hero-section::before {
 }
 
 .field-full,
+.form-legal-note,
 .submit-button,
 .form-feedback {
   grid-column: 1 / -1;
@@ -1197,6 +1233,18 @@ body.mode-windows .hero-section::before {
 .submit-button {
   width: 100%;
   margin-top: 4px;
+}
+
+.form-legal-note {
+  margin: -2px 0 0;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.form-legal-note a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
 }
 
 .site-footer {
@@ -1244,6 +1292,84 @@ body.mode-windows .hero-section::before {
 .floating-cta.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.policy-page {
+  min-height: 100vh;
+  padding: 36px 0 64px;
+}
+
+.policy-card {
+  width: min(calc(100% - 32px), 920px);
+  margin: 0 auto;
+  padding: 32px 28px;
+  border-radius: 32px;
+  background: color-mix(in srgb, var(--surface) 94%, white);
+  border: 1px solid var(--surface-line);
+  box-shadow: var(--shadow);
+}
+
+.policy-backlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.policy-card h1 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.06;
+}
+
+.policy-lead {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.policy-meta {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: var(--surface-soft);
+  border: 1px solid var(--surface-line);
+}
+
+.policy-section + .policy-section {
+  margin-top: 28px;
+}
+
+.policy-section h2 {
+  margin: 0 0 12px;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+}
+
+.policy-section p,
+.policy-section li {
+  color: var(--muted);
+  line-height: 1.72;
+}
+
+.policy-section ul {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+
+.policy-note {
+  margin-top: 28px;
+  padding: 18px 20px;
+  border-radius: 22px;
+  background: var(--accent-soft);
+  border: 1px solid var(--surface-line);
+  color: var(--text);
 }
 
 .cookie-banner {
@@ -1864,15 +1990,24 @@ body.chooser-open.chooser-selecting .site-header {
   }
 }
 
-@media (hover: hover) and (pointer: fine) and (min-width: 901px) and (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .orbit-text {
-    animation: orbitSpin 28s linear infinite;
-    will-change: transform;
+    animation: orbitGlow 5.4s ease-in-out infinite;
+    will-change: opacity;
   }
 
-  .orbit-text--why {
-    animation-duration: 34s;
+  .orbit-text svg {
+    animation: orbitSpin 40s linear infinite;
+    -webkit-animation: orbitSpin 40s linear infinite;
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .orbit-text--why svg {
+    animation-duration: 48s;
+    -webkit-animation-duration: 48s;
     animation-direction: reverse;
+    -webkit-animation-direction: reverse;
   }
 }
 
