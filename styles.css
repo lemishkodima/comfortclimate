@@ -313,6 +313,7 @@ img {
 .cta-button,
 .secondary-button,
 .ghost-button {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -333,9 +334,24 @@ img {
 }
 
 .header-cta,
-.submit-button,
-.floating-cta.visible {
+.submit-button {
   animation: ctaPulse 2.4s ease-in-out infinite;
+}
+
+.floating-cta::after {
+  content: "";
+  position: absolute;
+  inset: -7px;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--accent) 18%, transparent);
+  opacity: 0;
+  transform: scale(0.96);
+  pointer-events: none;
+}
+
+.floating-cta.visible::after {
+  animation: ctaHalo 2.4s ease-in-out infinite;
 }
 
 @keyframes ctaPulse {
@@ -347,6 +363,18 @@ img {
   50% {
     box-shadow: 0 20px 38px var(--cta-shadow), 0 0 0 7px color-mix(in srgb, var(--accent) 18%, transparent);
     filter: brightness(1.08);
+  }
+}
+
+@keyframes ctaHalo {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -2045,7 +2073,8 @@ body.chooser-open.chooser-selecting .site-header {
   .orbit-text,
   .header-cta,
   .submit-button,
-  .floating-cta.visible {
+  .floating-cta.visible,
+  .floating-cta.visible::after {
     animation: none;
     transition: none;
   }
