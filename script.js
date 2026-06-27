@@ -320,6 +320,9 @@ const APPS_SCRIPT_WEBHOOK_URL =
 let chooserHideTimer = null;
 let revealObserver = null;
 let floatingCtaTicking = false;
+let reviewTouchStartX = 0;
+let reviewTouchStartY = 0;
+let reviewTouchDeltaX = 0;
 let reviewsState = {
   mode: "windows",
   index: 0
@@ -348,6 +351,7 @@ function closeMobileMenu() {
   const toggle = qs("#menu-toggle");
   if (!header || !toggle) return;
   header.classList.remove("menu-open");
+  document.body.classList.remove("menu-open");
   toggle.setAttribute("aria-expanded", "false");
 }
 
@@ -356,6 +360,7 @@ function toggleMobileMenu() {
   const toggle = qs("#menu-toggle");
   if (!header || !toggle) return;
   const isOpen = header.classList.toggle("menu-open");
+  document.body.classList.toggle("menu-open", isOpen);
   toggle.setAttribute("aria-expanded", String(isOpen));
 }
 
@@ -597,7 +602,9 @@ function renderFaq(mode) {
       ([question, answer], index) => `
         <details class="faq-item" ${index === 0 ? "open" : ""}>
           <summary>${question}</summary>
-          <p>${answer}</p>
+          <div class="faq-item__content">
+            <p>${answer}</p>
+          </div>
         </details>
       `
     )
@@ -801,6 +808,7 @@ async function submitLead(payload) {
 
 function initInteractions() {
   const floatingCta = qs("#floating-cta");
+  const reviewsViewport = qs(".reviews-slider__viewport");
 
   document.addEventListener("click", (event) => {
     const switchButton = event.target.closest(".mode-switch__button");
@@ -887,6 +895,42 @@ function initInteractions() {
       feedback.textContent = "Не вдалося передати заявку на сервер. Заявку збережено локально в браузері.";
     }
   });
+
+  reviewsViewport?.addEventListener(
+    "touchstart",
+    (event) => {
+      const touch = event.changedTouches[0];
+      reviewTouchStartX = touch.clientX;
+      reviewTouchStartY = touch.clientY;
+      reviewTouchDeltaX = 0;
+    },
+    { passive: true }
+  );
+
+  reviewsViewport?.addEventListener(
+    "touchmove",
+    (event) => {
+      const touch = event.changedTouches[0];
+      reviewTouchDeltaX = touch.clientX - reviewTouchStartX;
+      const deltaY = touch.clientY - reviewTouchStartY;
+
+      if (Math.abs(reviewTouchDeltaX) > Math.abs(deltaY)) {
+        event.preventDefault();
+      }
+    },
+    { passive: false }
+  );
+
+  reviewsViewport?.addEventListener(
+    "touchend",
+    () => {
+      if (Math.abs(reviewTouchDeltaX) < 42) return;
+      reviewsState.index += reviewTouchDeltaX < 0 ? 1 : -1;
+      updateReviewsSlider();
+      reviewTouchDeltaX = 0;
+    },
+    { passive: true }
+  );
 
   const syncFloatingCta = () => {
     if (floatingCta) {
