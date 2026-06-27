@@ -871,6 +871,7 @@ async function submitLead(payload) {
 
 function initInteractions() {
   const floatingCta = qs("#floating-cta");
+  const leadSection = qs("#lead-form");
   const reviewsViewport = qs(".reviews-slider__viewport");
 
   document.addEventListener("click", (event) => {
@@ -997,7 +998,9 @@ function initInteractions() {
 
   const syncFloatingCta = () => {
     if (floatingCta) {
-      floatingCta.classList.toggle("visible", window.scrollY > 240);
+      const leadSectionTop = leadSection?.getBoundingClientRect().top ?? Number.POSITIVE_INFINITY;
+      const isLeadSectionNear = leadSectionTop < window.innerHeight * 0.82;
+      floatingCta.classList.toggle("visible", window.scrollY > 240 && !isLeadSectionNear);
     }
     floatingCtaTicking = false;
   };
