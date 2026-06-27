@@ -22,6 +22,18 @@ function iconMarkup(icon) {
         <path d="M12 3 18 5.4v5.2c0 4.2-2.5 7.8-6 9.4-3.5-1.6-6-5.2-6-9.4V5.4L12 3Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
       </svg>
     `,
+    package: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4.5 8.2 12 4l7.5 4.2v7.6L12 20l-7.5-4.2V8.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
+        <path d="M4.8 8.4 12 12.5l7.2-4.1M12 12.5V20" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
+      </svg>
+    `,
+    fan: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <circle cx="12" cy="12" r="2.2" stroke="currentColor" stroke-width="1.8"></circle>
+        <path d="M12 4.2c2.4 0 3.8 1.5 3.8 3.2 0 1.2-.7 2.1-1.8 2.8M19.1 15.8c-1.2 2.1-3.1 2.6-4.6 1.8-1-.6-1.5-1.7-1.5-3M4.9 15.8c-1.2-2.1-.7-4.1.8-4.9 1-.6 2.2-.4 3.3.2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"></path>
+      </svg>
+    `,
     wrench: `
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="m14.7 6.3 3 3-7.9 7.9a2.1 2.1 0 1 1-3-3l7.9-7.9Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
@@ -77,7 +89,7 @@ const MODES = {
   windows: {
     accentClass: "mode-windows",
     title: "Вікна під ключ у Києві | Comfort Climate",
-    description: "Заміна, скління і монтаж вікон у Києві та області. Чіткий прорахунок, акуратна установка і гарантія.",
+    description: "Ремонт, обслуговування та заміна вікон у Києві та області. Чіткий прорахунок, акуратна робота і гарантія.",
     hero: {
       eyebrow: "Тепло. Тиша. Більше світла.",
       title: "Професійне встановлення вікон під ключ",
@@ -137,7 +149,7 @@ const MODES = {
         },
         {
           name: "Олег, Буча",
-          role: "Скління балкона",
+          role: "Балконні роботи",
           text: "Пояснили різницю по варіантах і не нав'язували зайве. Зробили акуратно, стики й геометрія виглядають дуже добре.",
           score: "5.0"
         },
@@ -178,7 +190,6 @@ const MODES = {
       callButton: "Зателефонувати",
       serviceOptions: [
         "Заміна вікон",
-        "Скління балкона",
         "Заміна склопакета",
         "Регулювання / сервіс",
         "Інше"
@@ -191,7 +202,7 @@ const MODES = {
   conditioners: {
     accentClass: "mode-conditioners",
     title: "Кондиціонери під ключ у Києві | Comfort Climate",
-    description: "Підбір, монтаж і сервіс кондиціонерів у Києві та області. Чисте трасування, запуск і гарантія.",
+    description: "Підбір, монтаж і сервіс кондиціонерів у Києві та області. Чистий якісний монтаж, запуск і гарантія.",
     hero: {
       eyebrow: "Прохолода. Комфорт. Спокій.",
       title: "Професійний монтаж кондиціонерів",
@@ -213,26 +224,26 @@ const MODES = {
     servicesTitle: "Наші послуги",
     promo: {
       badge: "Спецпропозиція",
-      title: "-50% на всі види послуг",
-      text: "Зафіксуємо вигідну ціну сьогодні та підберемо рішення під ваше приміщення без зайвих очікувань.",
+      title: "-50% на обслуговування кондиціонерів",
+      text: "Зафіксуємо вигідну ціну на сервісне обслуговування та підкажемо, що потрібно саме вашій системі.",
       discount: "-50%",
-      stampText: "на всі види послуг",
+      stampText: "на обслуговування",
       cta: "Забрати пропозицію"
     },
     services: [
       ["snow", "Монтаж", "Підбір і монтаж кондиціонерів під площу та сценарій використання."],
-      ["wrench", "Ремонт", "Діагностика, ремонт та заміна компонентів."],
-      ["shield", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи."],
+      ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність."],
+      ["fan", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи."],
       ["sparkle", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності."]
     ],
     why: {
       label: "Чому ми",
       title: "Чому нам довіряють монтаж кондиціонерів",
-      text: "Працюємо швидко й акуратно: підбираємо модель, погоджуємо трасу, запускаємо і залишаємо чистий результат.",
+      text: "Працюємо швидко та акуратно: підбираємо кондиціонери під ваші потреби, погоджуємо монтаж, запускаємо і залишаємо чистий результат.",
       points: [
         "Досвідчені сертифіковані майстри",
         "Прозорі ціни та зрозумілий монтаж",
-        "Чисте трасування і вакуумування системи",
+        "Чистий якісний монтаж і вакуумування системи",
         "Сервіс та підтримка після встановлення"
       ],
       orbitText: "чистий монтаж • тиха робота • гарантія • comfort climate • ",
@@ -246,7 +257,7 @@ const MODES = {
         {
           name: "Марина, Київ",
           role: "Монтаж кондиціонера",
-          text: "Приїхали вчасно, зробили трасу чисто і після себе все прибрали. Кондиціонер працює тихо, як і обіцяли.",
+          text: "Приїхали вчасно, зробили монтаж чисто і після себе все прибрали. Кондиціонер працює тихо, як і обіцяли.",
           score: "5.0"
         },
         {
@@ -273,7 +284,7 @@ const MODES = {
         ],
         [
           "Скільки триває монтаж кондиціонера?",
-          "У більшості випадків стандартний монтаж займає один день. Якщо траса складніша, строки узгоджуємо заздалегідь."
+          "У більшості випадків стандартний монтаж займає 2-4 години. Якщо монтаж складніший, строки узгоджуємо заздалегідь."
         ],
         [
           "Чи входить запуск і перевірка в монтаж?",
@@ -317,9 +328,14 @@ const dataLayer = (window.dataLayer = window.dataLayer || []);
 const supportsHistory = typeof window.history?.replaceState === "function";
 const APPS_SCRIPT_WEBHOOK_URL =
   "https://script.google.com/macros/s/AKfycbykio-tjuaUBzbuFmwqbnrnl2jRdp_KKiwCCgGcjXjgxhyW5-D00fpmpuL32AS-sr8_Bw/exec";
+const PROMO_TIMER_CONFIG = {
+  durationHours: 12,
+  storageKey: "comfort-climate-promo-deadline"
+};
 let chooserHideTimer = null;
 let revealObserver = null;
 let floatingCtaTicking = false;
+let promoTimerInterval = null;
 let reviewTouchStartX = 0;
 let reviewTouchStartY = 0;
 let reviewTouchDeltaX = 0;
@@ -334,6 +350,47 @@ function qs(selector) {
 
 function trackEvent(event, payload = {}) {
   dataLayer.push({ event, ...payload });
+}
+
+function getPromoDeadline() {
+  const now = Date.now();
+  const durationMs = PROMO_TIMER_CONFIG.durationHours * 60 * 60 * 1000;
+  const saved = Number(window.localStorage.getItem(PROMO_TIMER_CONFIG.storageKey));
+
+  if (Number.isFinite(saved) && saved > now) {
+    return saved;
+  }
+
+  const nextDeadline = now + durationMs;
+  window.localStorage.setItem(PROMO_TIMER_CONFIG.storageKey, String(nextDeadline));
+  return nextDeadline;
+}
+
+function formatCountdown(ms) {
+  const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+  const hours = String(Math.floor(totalSeconds / 3600)).padStart(2, "0");
+  const minutes = String(Math.floor((totalSeconds % 3600) / 60)).padStart(2, "0");
+  const seconds = String(totalSeconds % 60).padStart(2, "0");
+  return `${hours}:${minutes}:${seconds}`;
+}
+
+function updatePromoTimer() {
+  const deadline = getPromoDeadline();
+  const remaining = deadline - Date.now();
+  const value = formatCountdown(remaining);
+
+  document.querySelectorAll("[data-promo-timer-value]").forEach((node) => {
+    node.textContent = value;
+  });
+}
+
+function initPromoTimer() {
+  if (promoTimerInterval) {
+    window.clearInterval(promoTimerInterval);
+  }
+
+  updatePromoTimer();
+  promoTimerInterval = window.setInterval(updatePromoTimer, 1000);
 }
 
 function getQueryMode() {
@@ -482,6 +539,7 @@ function renderHero(mode) {
         <span class="hero-discount-stamp__badge">${promo.badge}</span>
         <strong>${promo.discount}</strong>
         <small>${promo.stampText}</small>
+        <span class="hero-discount-stamp__timer">До кінця: <b data-promo-timer-value>--:--:--</b></span>
       </div>
       ${orbitTextMarkup(orbitId, config.orbitText, "orbit-text--hero")}
       <div class="hero-image-card__media">
@@ -513,7 +571,12 @@ function renderPromo(mode) {
   qs("#promo-title").textContent = config.title;
   qs("#promo-text").textContent = config.text;
   qs("#promo-discount").textContent = config.discount;
+  qs("#promo-timer").innerHTML = `
+    <span>До кінця пропозиції</span>
+    <strong data-promo-timer-value>--:--:--</strong>
+  `;
   qs("#promo-cta").innerHTML = buttonMarkup(config.cta, "sparkle");
+  updatePromoTimer();
 }
 
 function renderWhy(mode) {
@@ -958,6 +1021,7 @@ function init() {
   initConsent();
   initChooserInteractions();
   initInteractions();
+  initPromoTimer();
   const directMode = getQueryMode();
   const preferredMode = directMode || getStoredMode() || "windows";
   applyMode(preferredMode);
