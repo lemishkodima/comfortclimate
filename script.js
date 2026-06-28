@@ -40,6 +40,14 @@ function iconMarkup(icon) {
         <path d="M7 9h10M8 17c1.4-1.2 3.4-1.2 4.8 0 1.4 1.2 3.4 1.2 4.8 0M7 20c.9-.7 2.1-.7 3 0M14 20c.9-.7 2.1-.7 3 0" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"></path>
       </svg>
     `,
+    tools: `
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="m4.5 19.5 5.4-5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="m14.1 9.9 5.4-5.4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+        <path d="M13 5.5 18.5 11 20 9.5 14.5 4 13 5.5Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
+        <path d="M6.4 5.2 18.8 17.6a1.9 1.9 0 0 1-2.7 2.7L3.7 7.9V4.8h2.7v.4Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
+      </svg>
+    `,
     package: `
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="M4.5 8.2 12 4l7.5 4.2v7.6L12 20l-7.5-4.2V8.2Z" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round"></path>
@@ -137,7 +145,7 @@ const MODES = {
     },
     services: [
       ["window", "Заміна вікон", "Пластикові та алюмінієві системи для квартир і будинків."],
-      ["wrench", "Ремонт вікон", "Діагностика, усунення продування, ремонт фурнітури та дрібні роботи."],
+      ["tools", "Ремонт вікон", "Діагностика, усунення продування, ремонт фурнітури та дрібні роботи."],
       ["settings", "Обслуговування", "Регулювання стулок, ущільнювачі, змащення та профілактика механізмів."],
       ["panel", "Заміна склопакета", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт."]
     ],
