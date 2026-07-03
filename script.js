@@ -250,7 +250,7 @@ const MODES = {
         ["signature", "Гарантія на роботи"]
       ],
       orbitText: "comfort climate • прохолода • чистий монтаж • сервіс • ",
-      image: "./assets/img/optimized/ac-garden.webp",
+      image: "./assets/img/ac-garden-1.png",
       imageAlt: "Кондиціонер біля зони відпочинку",
       mediaTag: "Київ та область"
     },
