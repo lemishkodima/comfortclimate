@@ -1166,6 +1166,17 @@ body.mode-conditioners .promo-timer strong {
   fill: rgba(255, 255, 255, 0.28);
 }
 
+body.mode-conditioners .why-media .orbit-text {
+  opacity: 0.95;
+  filter:
+    drop-shadow(0 10px 24px rgba(45, 126, 247, 0.34))
+    drop-shadow(0 0 14px rgba(173, 216, 255, 0.28));
+}
+
+body.mode-conditioners .why-media .orbit-text text {
+  fill: rgba(167, 211, 255, 0.86);
+}
+
 .contact-panel {
   display: grid;
   grid-template-columns: 0.38fr 0.62fr;
