@@ -28,6 +28,10 @@
   --hero-tag-bg: rgba(13, 47, 107, 0.9);
   --orbit-shadow: rgba(27, 63, 171, 0.18);
   --orbit-fill: rgba(27, 63, 171, 0.62);
+  --why-orbit-fill: rgba(176, 221, 255, 0.92);
+  --why-orbit-shadow: rgba(45, 126, 247, 0.34);
+  --why-orbit-glow: rgba(173, 216, 255, 0.28);
+  --why-orbit-letter-glow: rgba(45, 126, 247, 0.64);
   --why-gradient-start: #0d2f6b;
   --why-gradient-mid: #123b81;
   --why-gradient-end: #194b95;
@@ -78,6 +82,10 @@ body.mode-windows {
   --hero-tag-bg: rgba(63, 37, 18, 0.88);
   --orbit-shadow: rgba(181, 94, 40, 0.16);
   --orbit-fill: rgba(181, 94, 40, 0.72);
+  --why-orbit-fill: rgba(240, 185, 124, 0.9);
+  --why-orbit-shadow: rgba(181, 94, 40, 0.34);
+  --why-orbit-glow: rgba(255, 214, 166, 0.3);
+  --why-orbit-letter-glow: rgba(181, 94, 40, 0.6);
   --why-gradient-start: #232e20;
   --why-gradient-mid: #3f2512;
   --why-gradient-end: #4f4b40;
@@ -1174,27 +1182,16 @@ body.mode-conditioners .promo-timer strong {
   bottom: clamp(-46px, -3vw, -24px);
   z-index: 0;
   opacity: 0.94;
+  filter:
+    drop-shadow(0 10px 24px var(--why-orbit-shadow))
+    drop-shadow(0 0 14px var(--why-orbit-glow));
 }
 
 .why-panel > .orbit-text--why text {
-  fill: rgba(185, 219, 255, 0.82);
+  fill: var(--why-orbit-fill);
   filter:
     drop-shadow(0 0 5px rgba(255, 255, 255, 0.68))
-    drop-shadow(0 0 13px rgba(45, 126, 247, 0.46));
-}
-
-body.mode-conditioners .why-panel > .orbit-text--why {
-  opacity: 0.95;
-  filter:
-    drop-shadow(0 10px 24px rgba(45, 126, 247, 0.34))
-    drop-shadow(0 0 14px rgba(173, 216, 255, 0.28));
-}
-
-body.mode-conditioners .why-panel > .orbit-text--why text {
-  fill: rgba(176, 221, 255, 0.92);
-  filter:
-    drop-shadow(0 0 6px rgba(255, 255, 255, 0.82))
-    drop-shadow(0 0 16px rgba(45, 126, 247, 0.64));
+    drop-shadow(0 0 16px var(--why-orbit-letter-glow));
 }
 
 .contact-panel {
