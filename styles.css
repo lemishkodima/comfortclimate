@@ -727,8 +727,8 @@ body.mode-windows .hero-section::before {
 
 .hero-discount-stamp {
   position: absolute;
-  top: -26px;
-  right: 22px;
+  top: -24px;
+  right: -18px;
   z-index: 3;
   display: grid;
   gap: 4px;
