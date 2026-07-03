@@ -2336,12 +2336,12 @@ body.chooser-open.chooser-selecting .site-header {
   }
 
   .hero-discount-stamp {
-    top: 12px;
-    right: 12px;
-    width: min(148px, calc(100% - 24px));
+    top: -18px;
+    right: -2px;
+    width: min(152px, calc(100% - 22px));
     padding: 9px 10px;
     border-radius: 18px;
-    transform: rotate(3deg);
+    transform: rotate(4deg);
   }
 
   .hero-discount-stamp strong {
