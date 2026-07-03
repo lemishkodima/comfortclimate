@@ -2284,6 +2284,15 @@ body.chooser-open.chooser-selecting .site-header {
 }
 
 @media (max-width: 560px) {
+  .hero-section {
+    overflow-x: clip;
+  }
+
+  .hero-media,
+  .hero-image-card {
+    max-width: 100%;
+  }
+
   .promo-topbar {
     min-height: 40px;
     gap: 7px;
@@ -2337,7 +2346,7 @@ body.chooser-open.chooser-selecting .site-header {
 
   .hero-discount-stamp {
     top: -18px;
-    right: -2px;
+    right: -6px;
     width: min(152px, calc(100% - 22px));
     padding: 9px 10px;
     border-radius: 18px;
@@ -2351,6 +2360,11 @@ body.chooser-open.chooser-selecting .site-header {
   .hero-discount-stamp__badge,
   .hero-discount-stamp__timer {
     font-size: 0.6rem;
+  }
+
+  .orbit-text--hero {
+    right: -8px;
+    bottom: 8px;
   }
 
   .mode-switch {
