@@ -28,6 +28,8 @@
   --hero-tag-bg: rgba(13, 47, 107, 0.9);
   --orbit-shadow: rgba(27, 63, 171, 0.18);
   --orbit-fill: rgba(27, 63, 171, 0.62);
+  --brand-logo-filter: brightness(0) saturate(100%) invert(17%) sepia(55%) saturate(1483%) hue-rotate(194deg) brightness(92%) contrast(94%);
+  --brand-logo-glow: drop-shadow(0 8px 18px rgba(18, 53, 111, 0.14));
   --why-orbit-fill: rgba(176, 221, 255, 0.92);
   --why-orbit-shadow: rgba(45, 126, 247, 0.34);
   --why-orbit-glow: rgba(173, 216, 255, 0.28);
@@ -82,6 +84,8 @@ body.mode-windows {
   --hero-tag-bg: rgba(63, 37, 18, 0.88);
   --orbit-shadow: rgba(181, 94, 40, 0.16);
   --orbit-fill: rgba(181, 94, 40, 0.72);
+  --brand-logo-filter: brightness(0) saturate(100%) invert(34%) sepia(80%) saturate(888%) hue-rotate(344deg) brightness(90%) contrast(91%);
+  --brand-logo-glow: drop-shadow(0 8px 18px rgba(98, 56, 27, 0.16));
   --why-orbit-fill: rgba(240, 185, 124, 0.9);
   --why-orbit-shadow: rgba(181, 94, 40, 0.34);
   --why-orbit-glow: rgba(255, 214, 166, 0.3);
@@ -281,6 +285,8 @@ body.mode-conditioners .promo-topbar__cta {
   width: 150px;
   height: auto;
   object-fit: contain;
+  filter: var(--brand-logo-filter) var(--brand-logo-glow);
+  transition: filter 0.28s ease;
 }
 
 .mode-switch {
@@ -1846,6 +1852,8 @@ body.chooser-open.chooser-selecting .site-header {
   width: 118px;
   height: auto;
   object-fit: contain;
+  filter: var(--brand-logo-filter) var(--brand-logo-glow);
+  transition: filter 0.28s ease;
 }
 
 .chooser-control__arrow {
