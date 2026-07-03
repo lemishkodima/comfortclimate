@@ -352,7 +352,9 @@ const appState = {
   mode: "windows"
 };
 
-const LOGO_SRC = "./assets/img/logo.svg?v=20260704-base-logo";
+const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260704-base-logo";
+const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260704-phone-logo";
+const PHONE_LOGO_QUERY = window.matchMedia("(max-width: 560px)");
 
 const dataLayer = (window.dataLayer = window.dataLayer || []);
 const supportsHistory = typeof window.history?.replaceState === "function";
@@ -723,8 +725,11 @@ function renderLead(mode) {
 }
 
 function updateLogos() {
+  const usePhoneLogo = PHONE_LOGO_QUERY.matches;
+  const logoSrc = usePhoneLogo ? LOGO_PHONE_SRC : LOGO_DESKTOP_SRC;
   document.querySelectorAll(".brand-logo, .footer-logo, .chooser-control__logo").forEach((logo) => {
-    logo.setAttribute("src", LOGO_SRC);
+    logo.setAttribute("src", logoSrc);
+    logo.classList.toggle("is-phone-logo", usePhoneLogo);
   });
 }
 
@@ -1052,6 +1057,11 @@ function initInteractions() {
 
 function init() {
   qs("#menu-toggle")?.addEventListener("click", toggleMobileMenu);
+  if (typeof PHONE_LOGO_QUERY.addEventListener === "function") {
+    PHONE_LOGO_QUERY.addEventListener("change", updateLogos);
+  } else {
+    PHONE_LOGO_QUERY.addListener(updateLogos);
+  }
   fillAttributionFields();
   initConsent();
   initChooserInteractions();
