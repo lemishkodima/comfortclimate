@@ -2329,28 +2329,28 @@ body.chooser-open.chooser-selecting .site-header {
   .hero-image-card__tag {
     left: 16px;
     top: 16px;
-    max-width: calc(100% - 190px);
+    max-width: calc(100% - 172px);
     padding: 7px 10px;
-    font-size: 0.74rem;
+    font-size: 0.7rem;
     white-space: nowrap;
   }
 
   .hero-discount-stamp {
-    top: 58px;
+    top: 12px;
     right: 12px;
-    width: min(160px, calc(100% - 24px));
-    padding: 10px 11px;
+    width: min(148px, calc(100% - 24px));
+    padding: 9px 10px;
     border-radius: 18px;
-    transform: rotate(4deg);
+    transform: rotate(3deg);
   }
 
   .hero-discount-stamp strong {
-    font-size: 1.72rem;
+    font-size: 1.58rem;
   }
 
   .hero-discount-stamp__badge,
   .hero-discount-stamp__timer {
-    font-size: 0.64rem;
+    font-size: 0.6rem;
   }
 
   .mode-switch {
