@@ -2326,6 +2326,33 @@ body.chooser-open.chooser-selecting .site-header {
     width: 124px;
   }
 
+  .hero-image-card__tag {
+    left: 16px;
+    top: 16px;
+    max-width: calc(100% - 190px);
+    padding: 7px 10px;
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+
+  .hero-discount-stamp {
+    top: 58px;
+    right: 12px;
+    width: min(160px, calc(100% - 24px));
+    padding: 10px 11px;
+    border-radius: 18px;
+    transform: rotate(4deg);
+  }
+
+  .hero-discount-stamp strong {
+    font-size: 1.72rem;
+  }
+
+  .hero-discount-stamp__badge,
+  .hero-discount-stamp__timer {
+    font-size: 0.64rem;
+  }
+
   .mode-switch {
     min-width: 0;
     border-radius: 24px;
