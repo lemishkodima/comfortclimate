@@ -265,9 +265,9 @@ const MODES = {
     },
     services: [
       ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність.", "./assets/img/services/equipment-sales.webp"],
+      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання.", "./assets/img/services/ac-installation.webp"],
       ["settings", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи.", "./assets/img/services/ac-service.webp"],
-      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності.", "./assets/img/services/ac-cleaning.webp"],
-      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання.", "./assets/img/services/ac-installation.webp"]
+      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності.", "./assets/img/services/ac-cleaning.webp"]
     ],
     why: {
       label: "Чому ми",
