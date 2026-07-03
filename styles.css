@@ -659,6 +659,10 @@ body.mode-windows .hero-section::before {
   line-height: 0.96;
 }
 
+body.mode-conditioners .hero-copy h1 {
+  max-width: 8.4ch;
+}
+
 .hero-subtitle,
 .section-heading p,
 .why-copy p,
@@ -1890,6 +1894,19 @@ body.chooser-open.chooser-selecting .site-header {
 
 .mode-chooser[data-state="selecting"] .chooser-half__content {
   opacity: 0;
+}
+
+@media (max-width: 1350px) and (min-width: 1181px) {
+  .hero-panel {
+    grid-template-columns: minmax(0, 0.92fr) minmax(480px, 1fr);
+    gap: clamp(56px, 6vw, 86px);
+    padding-inline: 28px;
+  }
+
+  .hero-copy h1 {
+    max-width: 8.2ch;
+    font-size: clamp(3rem, 4.35vw, 4.35rem);
+  }
 }
 
 @media (max-width: 1180px) {
