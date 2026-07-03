@@ -350,7 +350,7 @@ const appState = {
 
 const LOGO_BY_MODE = {
   windows: "./assets/img/logo-windows.svg",
-  conditioners: "./assets/img/logo.svg"
+  conditioners: "./assets/img/logo-conditioners.svg"
 };
 
 const dataLayer = (window.dataLayer = window.dataLayer || []);
