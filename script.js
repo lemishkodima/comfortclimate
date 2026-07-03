@@ -352,10 +352,7 @@ const appState = {
   mode: "windows"
 };
 
-const LOGO_BY_MODE = {
-  windows: "./assets/img/logo.svg?v=20260703-logo",
-  conditioners: "./assets/img/logo.svg?v=20260703-logo"
-};
+const LOGO_SRC = "./assets/img/logo.svg?v=20260704-base-logo";
 
 const dataLayer = (window.dataLayer = window.dataLayer || []);
 const supportsHistory = typeof window.history?.replaceState === "function";
@@ -729,10 +726,9 @@ function renderLead(mode) {
   qs("#lead-type").value = config.type;
 }
 
-function updateLogos(mode) {
-  const logoSrc = LOGO_BY_MODE[mode] || LOGO_BY_MODE.conditioners;
+function updateLogos() {
   document.querySelectorAll(".brand-logo, .footer-logo, .chooser-control__logo").forEach((logo) => {
-    logo.setAttribute("src", logoSrc);
+    logo.setAttribute("src", LOGO_SRC);
   });
 }
 
