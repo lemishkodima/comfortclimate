@@ -657,14 +657,13 @@ body.mode-windows .hero-section::before {
 
 .hero-copy h1 {
   max-width: 9ch;
-  font-size: clamp(3rem, 4.55vw, 4.85rem);
+  font-size: clamp(2.8rem, 3.95vw, 4.55rem);
   line-height: 0.96;
-  hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 body.mode-windows .hero-copy h1 {
-  max-width: 7.8ch;
+  max-width: 8.9ch;
+  font-size: clamp(2.75rem, 3.55vw, 4.15rem);
 }
 
 body.mode-conditioners .hero-copy h1 {
@@ -1913,11 +1912,12 @@ body.chooser-open.chooser-selecting .site-header {
 
   .hero-copy h1 {
     max-width: 8.2ch;
-    font-size: clamp(3rem, 4.35vw, 4.35rem);
+    font-size: clamp(2.7rem, 3.45vw, 3.9rem);
   }
 
   body.mode-windows .hero-copy h1 {
-    max-width: 7.6ch;
+    max-width: 8.8ch;
+    font-size: clamp(2.65rem, 3.25vw, 3.65rem);
   }
 }
 
