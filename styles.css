@@ -262,65 +262,17 @@ body.mode-conditioners .promo-topbar__cta {
 }
 
 .brand {
-  display: inline-grid;
-  justify-items: center;
+  display: inline-flex;
   align-items: center;
-  gap: 5px;
   text-decoration: none;
 }
 
-.brand-lockup {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-}
-
-.brand-mark {
-  width: 58px;
-  height: 38px;
-  overflow: hidden;
-  flex: 0 0 auto;
-}
-
 .brand-logo,
-.footer-logo,
-.chooser-control__logo {
+.footer-logo {
   display: block;
-  width: 66px;
+  width: 150px;
   height: auto;
-  max-width: none;
   object-fit: contain;
-}
-
-.brand-name {
-  color: color-mix(in srgb, var(--dark) 86%, var(--accent));
-  font-family: var(--font-display);
-  font-size: 1.02rem;
-  font-weight: 900;
-  line-height: 0.95;
-  letter-spacing: 0.075em;
-}
-
-.brand-tagline,
-.footer-tagline {
-  margin: 0;
-  max-width: 24ch;
-  color: color-mix(in srgb, var(--dark) 76%, var(--accent));
-  font-size: 0.56rem;
-  font-weight: 800;
-  line-height: 1.05;
-  letter-spacing: 0.06em;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.footer-tagline {
-  max-width: 24ch;
-  margin-top: 4px;
-  margin-bottom: 10px;
-  color: color-mix(in srgb, var(--dark) 70%, var(--accent));
-  font-size: 0.72rem;
 }
 
 .mode-switch {
@@ -1850,32 +1802,22 @@ body.chooser-open.chooser-selecting .site-header {
 }
 
 .chooser-control__brand {
-  display: inline-grid;
-  justify-items: center;
-  gap: 5px;
-  min-width: 178px;
-  padding: 14px 18px 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 156px;
+  min-height: 76px;
+  padding: 14px 18px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 22px 46px rgba(6, 15, 34, 0.32);
 }
 
-.brand-lockup--chooser {
-  gap: 7px;
-}
-
-.brand-mark--chooser {
-  width: 52px;
-  height: 34px;
-}
-
-.chooser-control__brand .brand-name {
-  font-size: 0.92rem;
-}
-
-.chooser-control__brand .brand-tagline {
-  color: color-mix(in srgb, var(--dark) 72%, var(--accent));
-  font-size: 0.48rem;
+.chooser-control__logo {
+  display: block;
+  width: 118px;
+  height: auto;
+  object-fit: contain;
 }
 
 .chooser-control__arrow {
@@ -2014,22 +1956,7 @@ body.chooser-open.chooser-selecting .site-header {
   }
 
   .brand-logo {
-    width: 56px;
-  }
-
-  .brand-mark {
-    width: 49px;
-    height: 32px;
-  }
-
-  .brand-name {
-    font-size: 0.82rem;
-  }
-
-  .brand-tagline {
-    max-width: 22ch;
-    font-size: 0.42rem;
-    letter-spacing: 0.04em;
+    width: 118px;
   }
 
   .menu-toggle {
@@ -2384,22 +2311,7 @@ body.chooser-open.chooser-selecting .site-header {
   }
 
   .brand-logo {
-    width: 48px;
-  }
-
-  .brand-mark {
-    width: 42px;
-    height: 28px;
-  }
-
-  .brand-name {
-    font-size: 0.68rem;
-  }
-
-  .brand-tagline {
-    max-width: 20ch;
-    font-size: 0.36rem;
-    line-height: 1;
+    width: 96px;
   }
 
   .mode-switch {
