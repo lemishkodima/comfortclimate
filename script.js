@@ -260,10 +260,10 @@ const MODES = {
       cta: "Забрати пропозицію"
     },
     services: [
-      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання."],
-      ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність."],
-      ["settings", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи."],
-      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності."]
+      ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність.", "./assets/img/services/equipment-sales.webp"],
+      ["settings", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи.", "./assets/img/services/ac-service.webp"],
+      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності.", "./assets/img/services/ac-cleaning.webp"],
+      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання.", "./assets/img/services/ac-installation.webp"]
     ],
     why: {
       label: "Чому ми",
@@ -584,9 +584,13 @@ function renderServices(mode) {
   qs("#services-title").textContent = config.servicesTitle;
   qs("#services-grid").innerHTML = config.services
     .map(
-      ([icon, title, text]) => `
+      ([icon, title, text, image]) => `
         <article class="service-card reveal-target">
-          <div class="service-card__icon">${iconMarkup(icon)}</div>
+          ${
+            image
+              ? `<div class="service-card__image"><img src="${image}" alt="${title}" loading="lazy" decoding="async" /></div>`
+              : `<div class="service-card__icon">${iconMarkup(icon)}</div>`
+          }
           <h3>${title}</h3>
           <p>${text}</p>
         </article>
