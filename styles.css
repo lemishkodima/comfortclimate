@@ -1094,6 +1094,8 @@ body.mode-conditioners .promo-timer strong {
 }
 
 .why-panel {
+  position: relative;
+  isolation: isolate;
   display: grid;
   grid-template-columns: 0.95fr 1.05fr;
   gap: 30px;
@@ -1106,6 +1108,8 @@ body.mode-conditioners .promo-timer strong {
 }
 
 .why-copy {
+  position: relative;
+  z-index: 1;
   display: grid;
   gap: 18px;
   align-content: center;
@@ -1152,6 +1156,7 @@ body.mode-conditioners .promo-timer strong {
 
 .why-media {
   position: relative;
+  z-index: 1;
   overflow: hidden;
   border-radius: 28px;
   min-height: 360px;
@@ -1164,24 +1169,32 @@ body.mode-conditioners .promo-timer strong {
   object-fit: cover;
 }
 
-.why-media .orbit-text text {
-  fill: rgba(255, 255, 255, 0.28);
+.why-panel > .orbit-text--why {
+  left: clamp(-58px, -4vw, -28px);
+  bottom: clamp(-46px, -3vw, -24px);
+  z-index: 0;
+  opacity: 0.94;
 }
 
-.why-media .orbit-text--why {
-  left: 18px;
-  bottom: 18px;
+.why-panel > .orbit-text--why text {
+  fill: rgba(185, 219, 255, 0.82);
+  filter:
+    drop-shadow(0 0 5px rgba(255, 255, 255, 0.68))
+    drop-shadow(0 0 13px rgba(45, 126, 247, 0.46));
 }
 
-body.mode-conditioners .why-media .orbit-text {
+body.mode-conditioners .why-panel > .orbit-text--why {
   opacity: 0.95;
   filter:
     drop-shadow(0 10px 24px rgba(45, 126, 247, 0.34))
     drop-shadow(0 0 14px rgba(173, 216, 255, 0.28));
 }
 
-body.mode-conditioners .why-media .orbit-text text {
-  fill: rgba(167, 211, 255, 0.86);
+body.mode-conditioners .why-panel > .orbit-text--why text {
+  fill: rgba(176, 221, 255, 0.92);
+  filter:
+    drop-shadow(0 0 6px rgba(255, 255, 255, 0.82))
+    drop-shadow(0 0 16px rgba(45, 126, 247, 0.64));
 }
 
 .contact-panel {

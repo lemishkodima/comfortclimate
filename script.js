@@ -620,11 +620,13 @@ function renderPromo(mode) {
 function renderWhy(mode) {
   const config = MODES[mode].why;
   const orbitId = `why-orbit-${mode}`;
+  const panel = qs(".why-panel");
   qs("#why-kicker").textContent = config.label;
   qs("#why-title").textContent = config.title;
   qs("#why-text").textContent = config.text;
+  panel.querySelectorAll(".orbit-text--why").forEach((item) => item.remove());
+  panel.insertAdjacentHTML("afterbegin", orbitTextMarkup(orbitId, config.orbitText, "orbit-text--why"));
   qs(".why-media").innerHTML = `
-    ${orbitTextMarkup(orbitId, config.orbitText, "orbit-text--why")}
     <img id="why-image" src="${config.image}" alt="${config.imageAlt}" loading="lazy" />
   `;
   qs("#why-list").innerHTML = config.points
