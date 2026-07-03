@@ -29,10 +29,6 @@
   --orbit-shadow: rgba(27, 63, 171, 0.18);
   --orbit-fill: rgba(27, 63, 171, 0.62);
   --brand-logo-glow: drop-shadow(0 8px 18px rgba(18, 53, 111, 0.14));
-  --why-orbit-fill: rgba(176, 221, 255, 0.92);
-  --why-orbit-shadow: rgba(45, 126, 247, 0.34);
-  --why-orbit-glow: rgba(173, 216, 255, 0.28);
-  --why-orbit-letter-glow: rgba(45, 126, 247, 0.64);
   --why-gradient-start: #0d2f6b;
   --why-gradient-mid: #123b81;
   --why-gradient-end: #194b95;
@@ -84,10 +80,6 @@ body.mode-windows {
   --orbit-shadow: rgba(181, 94, 40, 0.16);
   --orbit-fill: rgba(181, 94, 40, 0.72);
   --brand-logo-glow: drop-shadow(0 8px 18px rgba(98, 56, 27, 0.16));
-  --why-orbit-fill: rgba(240, 185, 124, 0.9);
-  --why-orbit-shadow: rgba(181, 94, 40, 0.34);
-  --why-orbit-glow: rgba(255, 214, 166, 0.3);
-  --why-orbit-letter-glow: rgba(181, 94, 40, 0.6);
   --why-gradient-start: #232e20;
   --why-gradient-mid: #3f2512;
   --why-gradient-end: #4f4b40;
@@ -871,12 +863,6 @@ body.mode-conditioners .hero-discount-stamp__timer {
   bottom: 12px;
 }
 
-.orbit-text--why {
-  left: -42px;
-  bottom: -34px;
-  opacity: 0.76;
-}
-
 @keyframes orbitSpin {
   from {
     transform: rotate(0deg);
@@ -1179,23 +1165,6 @@ body.mode-conditioners .promo-timer strong {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.why-panel > .orbit-text--why {
-  left: clamp(-58px, -4vw, -28px);
-  bottom: clamp(-46px, -3vw, -24px);
-  z-index: 0;
-  opacity: 0.94;
-  filter:
-    drop-shadow(0 10px 24px var(--why-orbit-shadow))
-    drop-shadow(0 0 14px var(--why-orbit-glow));
-}
-
-.why-panel > .orbit-text--why text {
-  fill: var(--why-orbit-fill);
-  filter:
-    drop-shadow(0 0 5px rgba(255, 255, 255, 0.68))
-    drop-shadow(0 0 16px var(--why-orbit-letter-glow));
 }
 
 .contact-panel {
@@ -2149,11 +2118,6 @@ body.chooser-open.chooser-selecting .site-header {
     bottom: 8px;
   }
 
-  .orbit-text--why {
-    left: -18px;
-    bottom: -20px;
-  }
-
   .service-grid {
     grid-template-columns: 1fr;
   }
@@ -2309,12 +2273,6 @@ body.chooser-open.chooser-selecting .site-header {
     transform: translateZ(0);
   }
 
-  .orbit-text--why svg {
-    animation-duration: 48s;
-    -webkit-animation-duration: 48s;
-    animation-direction: reverse;
-    -webkit-animation-direction: reverse;
-  }
 }
 
 @media (max-width: 560px) {
