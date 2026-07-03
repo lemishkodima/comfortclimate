@@ -79,9 +79,9 @@ function iconMarkup(icon) {
     car: `<span class="icon-emoji" aria-hidden="true">🚘</span>`,
     toolEmoji: `<span class="icon-emoji" aria-hidden="true">🛠️</span>`,
     signature: `<span class="icon-emoji" aria-hidden="true">✍🏻</span>`,
-    draftStop: `<span class="icon-emoji" aria-hidden="true">💨❌</span>`,
-    cleanWork: `<span class="icon-emoji" aria-hidden="true">🧹👌🏻</span>`,
-    qualityParts: `<span class="icon-emoji" aria-hidden="true">🛠️💎</span>`,
+    draftStop: `<span class="icon-emoji" aria-hidden="true">❌</span>`,
+    cleanWork: `<span class="icon-emoji" aria-hidden="true">✨</span>`,
+    qualityParts: `<span class="icon-emoji" aria-hidden="true">💎</span>`,
     check: `
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path d="m5 12.5 4.2 4.2L19 7" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
