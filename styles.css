@@ -262,8 +262,11 @@ body.mode-conditioners .promo-topbar__cta {
 }
 
 .brand {
-  display: inline-flex;
+  display: inline-grid;
+  justify-items: center;
   align-items: center;
+  gap: 3px;
+  text-decoration: none;
 }
 
 .brand-logo,
@@ -271,6 +274,27 @@ body.mode-conditioners .promo-topbar__cta {
   width: 120px;
   height: auto;
   object-fit: contain;
+}
+
+.brand-tagline,
+.footer-tagline {
+  margin: 0;
+  max-width: 14ch;
+  color: color-mix(in srgb, var(--dark) 76%, var(--accent));
+  font-size: 0.64rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  max-width: 18ch;
+  margin-top: 4px;
+  margin-bottom: 10px;
+  color: color-mix(in srgb, var(--dark) 70%, var(--accent));
+  font-size: 0.72rem;
 }
 
 .mode-switch {
@@ -1947,6 +1971,12 @@ body.chooser-open.chooser-selecting .site-header {
     width: 82px;
   }
 
+  .brand-tagline {
+    max-width: 12ch;
+    font-size: 0.5rem;
+    letter-spacing: 0.04em;
+  }
+
   .menu-toggle {
     display: inline-flex;
     grid-column: 3;
@@ -2300,6 +2330,12 @@ body.chooser-open.chooser-selecting .site-header {
 
   .brand-logo {
     width: 70px;
+  }
+
+  .brand-tagline {
+    max-width: 11ch;
+    font-size: 0.44rem;
+    line-height: 1;
   }
 
   .mode-switch {
