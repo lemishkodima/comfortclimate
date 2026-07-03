@@ -205,6 +205,25 @@ img {
   white-space: nowrap;
 }
 
+body.mode-conditioners .promo-topbar {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.1);
+  border-bottom: 1px solid rgba(111, 16, 32, 0.16);
+  box-shadow: 0 10px 26px rgba(111, 16, 32, 0.08);
+  backdrop-filter: blur(18px);
+}
+
+body.mode-conditioners .promo-topbar strong {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.14);
+}
+
+body.mode-conditioners .promo-topbar__cta {
+  color: #fff;
+  background: linear-gradient(135deg, #8f1b2c, #5e0d1b);
+  border-color: rgba(111, 16, 32, 0.25);
+}
+
 @keyframes topbarCtaPulse {
   0%,
   100% {
@@ -405,6 +424,18 @@ img {
 .header-cta,
 .submit-button {
   animation: ctaPulse 1.28s ease-in-out infinite;
+}
+
+body.mode-conditioners #hero-cta {
+  animation: ctaPulse 1.28s ease-in-out infinite;
+}
+
+.icon-emoji {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  line-height: 1;
 }
 
 .floating-cta::after {
@@ -744,6 +775,21 @@ body.mode-windows .hero-section::before {
   font-weight: 800;
 }
 
+body.mode-conditioners .hero-discount-stamp {
+  border-color: rgba(111, 16, 32, 0.5);
+  background: rgba(255, 248, 248, 0.95);
+}
+
+body.mode-conditioners .hero-discount-stamp__badge {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.12);
+}
+
+body.mode-conditioners .hero-discount-stamp__timer {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.12);
+}
+
 .hero-image-card__media {
   position: relative;
   overflow: hidden;
@@ -886,6 +932,11 @@ body.mode-windows .hero-section::before {
   text-transform: uppercase;
 }
 
+body.mode-conditioners .promo-badge {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.12);
+}
+
 .promo-copy h2 {
   margin: 0;
   font-family: var(--font-display);
@@ -913,6 +964,17 @@ body.mode-windows .hero-section::before {
   background: color-mix(in srgb, var(--accent) 10%, white);
   border: 1px solid var(--surface-line);
   box-shadow: 0 12px 28px rgba(17, 43, 89, 0.08);
+}
+
+body.mode-conditioners .promo-timer {
+  color: #6f1020;
+  background: rgba(111, 16, 32, 0.1);
+  border-color: rgba(111, 16, 32, 0.16);
+}
+
+body.mode-conditioners .promo-timer span,
+body.mode-conditioners .promo-timer strong {
+  color: #6f1020;
 }
 
 .promo-timer span {
