@@ -135,7 +135,7 @@ const MODES = {
         ["cleanWork", "Чиста робота"],
         ["qualityParts", "Якісні комплектуючі"]
       ],
-      orbitText: "comfort climate • тепло • тиша • світло • монтаж • ",
+      orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
       image: "./assets/img/optimized/pexels-kseniachernaya-5691531.webp",
       imageAlt: "Майстер виконує монтаж та налаштування вікна",
       mediaTag: "Реальні роботи"
@@ -165,7 +165,7 @@ const MODES = {
         "Працюємо з квартирами, будинками і комерційними приміщеннями.",
         "Чиста робота та післямонтажна підтримка."
       ],
-      orbitText: "точний замір • акуратний монтаж • гарантія • comfort climate • ",
+      orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
       image: "./assets/img/optimized/window-why.webp",
       imageAlt: "Металопластикове вікно в інтер'єрі"
     },
@@ -249,8 +249,8 @@ const MODES = {
         ["toolEmoji", "Сертифіковані майстри"],
         ["signature", "Гарантія на роботи"]
       ],
-      orbitText: "comfort climate • прохолода • чистий монтаж • сервіс • ",
-      image: "./assets/img/ac-garden-1.png",
+      orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
+      image: "./assets/img/optimized/ac-garden.webp",
       imageAlt: "Кондиціонер біля зони відпочинку",
       mediaTag: "Київ та область"
     },
@@ -280,7 +280,7 @@ const MODES = {
         "Виїзд майстра з обслуговування в день звернення",
         "Сервіс та підтримка після встановлення"
       ],
-      orbitText: "чистий монтаж • тиха робота • гарантія • comfort climate • ",
+      orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
       image: "./assets/img/optimized/ac-outdoor.webp",
       imageAlt: "Зовнішній блок кондиціонера"
     },
@@ -715,7 +715,6 @@ function renderLead(mode) {
   qs("#lead-subtitle").textContent = config.subtitle;
   qs("#lead-message").setAttribute("placeholder", config.messagePlaceholder);
   qs("#lead-submit").innerHTML = `<span class="button-label">${config.submit}</span>`;
-  qs("#lead-call-button").innerHTML = buttonMarkup(config.callButton, "phone");
   qs("#lead-service").innerHTML = [
     `<option value="">Оберіть послугу</option>`,
     ...config.serviceOptions.map((item) => `<option value="${item}">${item}</option>`)
@@ -926,8 +925,13 @@ function initInteractions() {
       return;
     }
 
-    if (event.target.closest("[data-track-phone]")) {
-      trackEvent("phone_call", { mode: appState.mode, source: "phone" });
+    const phoneLink = event.target.closest("[data-track-phone]");
+    if (phoneLink) {
+      trackEvent("phone_call", {
+        mode: appState.mode,
+        source: "phone",
+        operator: phoneLink.dataset.phoneOperator || "unknown"
+      });
     }
 
     const navLink = event.target.closest(".site-nav a");

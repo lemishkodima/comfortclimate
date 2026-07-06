@@ -381,29 +381,92 @@ body.mode-conditioners .promo-topbar__cta {
   flex-wrap: wrap;
 }
 
+.phone-list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.phone-list--header {
+  flex-wrap: nowrap;
+}
+
+.phone-list--contact {
+  align-items: stretch;
+}
+
+.phone-list--contact .phone-link {
+  flex: 1 1 220px;
+}
+
+.phone-list--footer {
+  display: grid;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+
 .phone-link {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 16px;
-  border-radius: 999px;
+  gap: 9px;
+  min-height: 48px;
+  padding: 7px 12px 7px 8px;
+  border-radius: 18px;
   text-decoration: none;
   color: var(--text);
   background: var(--phone-bg);
   border: 1px solid var(--phone-border);
   font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.phone-link::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  display: inline-block;
-  background-color: var(--phone-icon-color);
-  mask: center/contain no-repeat;
-  -webkit-mask: center/contain no-repeat;
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.4 4.5h2.7l1.2 3.9-1.8 1.8a14.7 14.7 0 0 0 4.3 4.3l1.8-1.8 3.9 1.2v2.7c0 .7-.5 1.3-1.2 1.4-1 .1-2 .2-2.8.2A13.6 13.6 0 0 1 5.9 8.5c0-.9 0-1.8.2-2.8.1-.7.7-1.2 1.3-1.2Z'/%3E%3C/svg%3E");
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M7.4 4.5h2.7l1.2 3.9-1.8 1.8a14.7 14.7 0 0 0 4.3 4.3l1.8-1.8 3.9 1.2v2.7c0 .7-.5 1.3-1.2 1.4-1 .1-2 .2-2.8.2A13.6 13.6 0 0 1 5.9 8.5c0-.9 0-1.8.2-2.8.1-.7.7-1.2 1.3-1.2Z'/%3E%3C/svg%3E");
+.phone-link__logo {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgba(18, 53, 111, 0.08);
+}
+
+.phone-link__logo img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.phone-link--lifecell .phone-link__logo {
+  width: 58px;
+  flex-basis: 58px;
+  border-radius: 10px;
+  background: #0050a6;
+}
+
+.phone-link--lifecell .phone-link__logo img {
+  width: 52px;
+  height: 28px;
+}
+
+.phone-link__text {
+  display: grid;
+  gap: 3px;
+}
+
+.phone-link__operator {
+  color: var(--muted);
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.phone-link__number {
+  font-size: 0.92rem;
 }
 
 .cta-button,
@@ -1523,6 +1586,10 @@ body.mode-conditioners .promo-timer strong {
   text-decoration: none;
 }
 
+.footer-shell .phone-link {
+  display: inline-flex;
+}
+
 .floating-cta {
   position: fixed;
   right: 28px;
@@ -2078,6 +2145,12 @@ body.chooser-open.chooser-selecting .site-header {
     border: 1px solid var(--surface-line);
   }
 
+  .site-header.menu-open .phone-list {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .site-header.menu-open .phone-link,
   .site-header.menu-open .header-cta {
     width: 100%;
@@ -2354,6 +2427,21 @@ body.chooser-open.chooser-selecting .site-header {
 
   .brand-logo.is-phone-logo {
     width: 118px;
+  }
+
+  .site-header.menu-open .phone-list,
+  .phone-list--contact {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .phone-link {
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .phone-link__number {
+    font-size: 0.88rem;
   }
 
   .footer-logo.is-phone-logo {
