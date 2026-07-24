@@ -1648,35 +1648,6 @@ body.mode-conditioners .promo-timer strong {
   text-align: left;
 }
 
-.footer-shell .footer-social-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  width: fit-content;
-  margin: 12px 0 4px;
-  color: var(--text);
-  font-weight: 700;
-}
-
-.footer-social-link__icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 28px;
-  height: 28px;
-  border-radius: 10px;
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 11%, transparent);
-}
-
-.footer-social-link__icon svg {
-  width: 18px;
-  height: 18px;
-  fill: none;
-  stroke: currentColor;
-  stroke-width: 1.9;
-}
-
 .footer-map {
   grid-column: 1 / -1;
   min-height: 280px;
@@ -1996,9 +1967,9 @@ body.chooser-open.chooser-selecting .site-header {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 156px;
-  min-height: 76px;
-  padding: 14px 18px;
+  width: 280px;
+  min-height: 116px;
+  padding: 18px 24px;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.96);
   box-shadow: 0 22px 46px rgba(6, 15, 34, 0.32);
@@ -2006,7 +1977,7 @@ body.chooser-open.chooser-selecting .site-header {
 
 .chooser-control__logo {
   display: block;
-  width: 132px;
+  width: 232px;
   height: auto;
   object-fit: contain;
   filter: var(--brand-logo-tone) var(--brand-logo-glow);
@@ -2606,7 +2577,7 @@ body.chooser-open.chooser-selecting .site-header {
   }
 
   .chooser-control__logo.is-phone-logo {
-    width: 124px;
+    width: 156px;
   }
 
   .hero-image-card__tag {
