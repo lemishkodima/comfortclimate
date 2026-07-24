@@ -405,7 +405,7 @@ body.mode-conditioners .promo-topbar__cta {
 .phone-list--contact .phone-link {
   display: grid;
   grid-template-columns: 58px 132px;
-  column-gap: 16px;
+  column-gap: 10px;
   justify-content: start;
 }
 
@@ -428,6 +428,11 @@ body.mode-conditioners .promo-topbar__cta {
 
 .phone-list--contact .phone-link__text {
   width: 132px;
+}
+
+.phone-list--contact .phone-link__operator,
+.phone-list--contact .phone-link__number {
+  text-align: left;
 }
 
 .phone-list--footer {
@@ -1621,34 +1626,49 @@ body.mode-conditioners .promo-timer strong {
 
 .footer-shell .phone-link {
   display: grid;
-  grid-template-columns: 42px minmax(128px, 1fr);
-  width: 188px;
-  column-gap: 9px;
+  grid-template-columns: 42px 116px;
+  width: auto;
+  column-gap: 10px;
+  justify-content: start;
+}
+
+.footer-shell .phone-link__logo,
+.footer-shell .phone-link--lifecell .phone-link__logo {
+  width: 42px;
+  height: 42px;
+  flex-basis: 42px;
 }
 
 .footer-shell .phone-link__text {
-  width: 100%;
+  width: 116px;
 }
 
 .footer-shell .phone-link__operator,
 .footer-shell .phone-link__number {
-  text-align: right;
+  text-align: left;
 }
 
 .footer-map {
   grid-column: 1 / -1;
   min-height: 280px;
+  padding: 16px;
   overflow: hidden;
   border-radius: 22px;
   border: 1px solid rgba(18, 53, 111, 0.08);
   background: rgba(18, 53, 111, 0.06);
 }
 
+.footer-map strong {
+  margin-bottom: 14px;
+}
+
 .footer-map iframe {
   display: block;
   width: 100%;
   height: 320px;
+  overflow: hidden;
   border: 0;
+  border-radius: 16px;
 }
 
 .floating-cta {
