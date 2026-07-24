@@ -1,18 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#F8FBFF"/>
-      <stop offset="100%" stop-color="#D7EEFF"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6fbff"/>
+      <stop offset="1" stop-color="#dbeeff"/>
     </linearGradient>
   </defs>
   <rect width="1200" height="630" fill="url(#bg)"/>
-  <rect x="80" y="80" width="1040" height="470" rx="36" fill="#0F172A"/>
-  <text x="140" y="240" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="64" font-weight="700">
-    Comfort Climate
-  </text>
-  <text x="140" y="330" fill="#D6E6F5" font-family="Arial, sans-serif" font-size="34">
-    Вікна та кондиціонери з одним лендингом
-  </text>
-  <circle cx="965" cy="220" r="74" fill="#1CA7EC"/>
-  <rect x="870" y="310" width="190" height="130" rx="26" fill="#00A6A6"/>
+  <circle cx="220" cy="245" r="142" fill="#ffffff" stroke="#d8e5f4" stroke-width="4"/>
+  <path d="M115 278c58 30 141 34 229 9 36-10 69-11 92-1" fill="none" stroke="#1f8bff" stroke-width="22" stroke-linecap="round"/>
+  <path d="M126 232c69-132 206-174 323-95" fill="none" stroke="#1f8bff" stroke-width="24" stroke-linecap="round"/>
+  <path d="M204 236 265 180l124 103v118H204V236Z" fill="#12356f"/>
+  <path d="M196 285h196" stroke="#ffffff" stroke-width="14"/>
+  <path d="M292 276h55v125h-55zM226 276h52v54h-52z" fill="#ffffff"/>
+  <path d="M143 210v96M96 258h94M113 228l60 60M173 228l-60 60" stroke="#1f8bff" stroke-width="16" stroke-linecap="round"/>
+  <path d="M398 92l17 48 49 17-49 17-17 49-17-49-48-17 48-17 17-48Z" fill="#f7a51f"/>
+  <path d="M374 408 471 310" stroke="#12356f" stroke-width="34" stroke-linecap="round"/>
+  <circle cx="471" cy="310" r="22" fill="#12356f"/>
+  <text x="560" y="205" fill="#12356f" font-family="Arial, sans-serif" font-size="58" font-weight="700">Dimkomfortu</text>
+  <text x="560" y="292" fill="#12356f" font-family="Arial, sans-serif" font-size="43" font-weight="700">Швидкий сервіс вікон та</text>
+  <text x="560" y="350" fill="#12356f" font-family="Arial, sans-serif" font-size="43" font-weight="700">кондиціонерів у Києві під ключ</text>
+  <text x="560" y="430" fill="#61728f" font-family="Arial, sans-serif" font-size="30">Київ та Київська область · 098 067 7007 · 093 067 7007</text>
 </svg>

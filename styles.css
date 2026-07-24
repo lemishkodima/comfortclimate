@@ -269,12 +269,14 @@ body.mode-conditioners .promo-topbar__cta {
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  min-width: 216px;
+  flex-shrink: 0;
 }
 
 .brand-logo,
 .footer-logo {
   display: block;
-  width: 172px;
+  width: 216px;
   height: auto;
   object-fit: contain;
   filter: var(--brand-logo-tone) var(--brand-logo-glow);
@@ -403,6 +405,7 @@ body.mode-conditioners .promo-topbar__cta {
 .phone-list--footer {
   display: grid;
   align-items: stretch;
+  justify-items: start;
   margin-bottom: 10px;
 }
 
@@ -467,6 +470,8 @@ body.mode-conditioners .promo-topbar__cta {
 
 .phone-link__number {
   font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
 }
 
 .cta-button,
@@ -1587,7 +1592,19 @@ body.mode-conditioners .promo-timer strong {
 }
 
 .footer-shell .phone-link {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 42px minmax(128px, 1fr);
+  width: 188px;
+  column-gap: 9px;
+}
+
+.footer-shell .phone-link__text {
+  width: 100%;
+}
+
+.footer-shell .phone-link__operator,
+.footer-shell .phone-link__number {
+  text-align: right;
 }
 
 .floating-cta {
@@ -2417,16 +2434,36 @@ body.chooser-open.chooser-selecting .site-header {
 
   .header-shell {
     width: calc(100% - 14px);
-    gap: 8px;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
     padding: 10px 10px;
   }
 
+  .brand {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .menu-toggle {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .mode-switch {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
   .brand-logo {
-    width: 108px;
+    width: 164px;
   }
 
   .brand-logo.is-phone-logo {
-    width: 118px;
+    width: 178px;
+  }
+
+  .hero-section {
+    padding-top: 196px;
   }
 
   .site-header.menu-open .phone-list,

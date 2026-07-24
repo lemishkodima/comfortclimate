@@ -120,8 +120,8 @@ function orbitTextMarkup(id, text, className = "") {
 const MODES = {
   windows: {
     accentClass: "mode-windows",
-    title: "Вікна під ключ у Києві | Comfort Climate",
-    description: "Ремонт, обслуговування та заміна вікон у Києві та області. Чіткий прорахунок, акуратна робота і гарантія.",
+    title: "Швидкий сервіс вікон та кондиціонерів у Києві під ключ",
+    description: "Dimkomfortu. Ремонт, обслуговування та заміна вікон у Києві та області. Чіткий прорахунок, акуратна робота і гарантія.",
     hero: {
       eyebrow: "Тепло. Тиша. Більше світла.",
       title: "Професійне обслуговування вікон під ключ.",
@@ -234,8 +234,8 @@ const MODES = {
   },
   conditioners: {
     accentClass: "mode-conditioners",
-    title: "Кондиціонери під ключ у Києві | Comfort Climate",
-    description: "Підбір, монтаж і сервіс кондиціонерів у Києві та області. Чистий, швидкий та якісний монтаж, запуск і гарантія.",
+    title: "Швидкий сервіс вікон та кондиціонерів у Києві під ключ",
+    description: "Dimkomfortu. Підбір, монтаж і сервіс кондиціонерів у Києві та області. Чистий, швидкий та якісний монтаж, запуск і гарантія.",
     hero: {
       eyebrow: "Прохолода. Комфорт. Спокій.",
       title: "Професійний монтаж та сервіс кондиціонерів",
@@ -355,6 +355,19 @@ const appState = {
 const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260704-base-logo";
 const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260704-phone-logo";
 const PHONE_LOGO_QUERY = window.matchMedia("(max-width: 560px)");
+const KYIV_DISTRICTS = [
+  "Голосіївський",
+  "Дарницький",
+  "Деснянський",
+  "Дніпровський",
+  "Оболонський",
+  "Печерський",
+  "Подільський",
+  "Святошинський",
+  "Солом'янський",
+  "Шевченківський",
+  "Київська область / інше"
+];
 
 const dataLayer = (window.dataLayer = window.dataLayer || []);
 const supportsHistory = typeof window.history?.replaceState === "function";
@@ -718,6 +731,10 @@ function renderLead(mode) {
   qs("#lead-service").innerHTML = [
     `<option value="">Оберіть послугу</option>`,
     ...config.serviceOptions.map((item) => `<option value="${item}">${item}</option>`)
+  ].join("");
+  qs("#lead-district").innerHTML = [
+    `<option value="">Оберіть район</option>`,
+    ...KYIV_DISTRICTS.map((item) => `<option value="${item}">${item}</option>`)
   ].join("");
   qs("#lead-mode").value = mode;
   qs("#lead-type").value = config.type;

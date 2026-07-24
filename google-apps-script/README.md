@@ -15,7 +15,7 @@ Recommended columns:
 4. `phone`
 5. `service`
 6. `details`
-7. `area`
+7. `district`
 8. `utm_source`
 9. `utm_campaign`
 10. `utm_medium`
