@@ -402,6 +402,34 @@ body.mode-conditioners .promo-topbar__cta {
   flex: 1 1 220px;
 }
 
+.phone-list--contact .phone-link {
+  display: grid;
+  grid-template-columns: 58px 132px;
+  column-gap: 16px;
+  justify-content: start;
+}
+
+.phone-list--contact .phone-link__logo,
+.phone-list--contact .phone-link--lifecell .phone-link__logo {
+  width: 58px;
+  height: 58px;
+  flex-basis: 58px;
+}
+
+.phone-list--contact .phone-link__logo img {
+  width: 34px;
+  height: 34px;
+}
+
+.phone-list--contact .phone-link--lifecell .phone-link__logo img {
+  width: 58px;
+  height: 58px;
+}
+
+.phone-list--contact .phone-link__text {
+  width: 132px;
+}
+
 .phone-list--footer {
   display: grid;
   align-items: stretch;
