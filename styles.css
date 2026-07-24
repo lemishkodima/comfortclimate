@@ -2407,6 +2407,12 @@ body.chooser-open.chooser-selecting .site-header {
     gap: 14px;
   }
 
+  .chooser-control__brand {
+    width: 156px;
+    min-height: 76px;
+    padding: 14px 18px;
+  }
+
   .chooser-control__arrow--start {
     order: -1;
   }
