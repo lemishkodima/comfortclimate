@@ -353,7 +353,7 @@ const appState = {
 };
 
 const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260724-readable-tagline";
-const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260724-readable-tagline";
+const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260724-compact-phone-logo";
 const PHONE_LOGO_QUERY = window.matchMedia("(max-width: 560px)");
 const KYIV_DISTRICTS = [
   "Голосіївський",
