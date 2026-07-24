@@ -352,8 +352,8 @@ const appState = {
   mode: "windows"
 };
 
-const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260704-base-logo";
-const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260704-phone-logo";
+const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260724-readable-tagline";
+const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260724-readable-tagline";
 const PHONE_LOGO_QUERY = window.matchMedia("(max-width: 560px)");
 const KYIV_DISTRICTS = [
   "Голосіївський",
