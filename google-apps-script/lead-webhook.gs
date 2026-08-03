@@ -117,7 +117,7 @@ function formatTelegramMessage_(payload) {
   const phoneHref = formatPhoneHref_(phone);
 
   return [
-    "🏠 New lead - Dimkomfortu",
+    "🏠 New lead - dimkomfortu",
     "Напрям: " + escapeHtml_(getDirectionLabel_(payload.mode)),
     "Ім'я: " + escapeHtml_(payload.name || "не вказано"),
     'Телефон: <a href="tel:' + escapeHtml_(phoneHref) + '">' + escapeHtml_(phone) + "</a>",
