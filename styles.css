@@ -1814,12 +1814,16 @@ body.mode-conditioners .promo-timer strong {
   padding: 5px;
   border-radius: 50%;
   stroke: currentColor;
-  stroke-width: 2.8;
+  stroke-width: 3px;
   stroke-linecap: round;
   stroke-linejoin: round;
   fill: none;
   background: rgba(255, 255, 255, 0.5);
   border: 3px solid currentColor;
+}
+
+.thank-card .thank-status svg path {
+  vector-effect: non-scaling-stroke;
 }
 
 .thank-card h1 {
