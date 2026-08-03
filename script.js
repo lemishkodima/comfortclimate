@@ -1020,7 +1020,8 @@ function initInteractions() {
       qs("#lead-type").value = MODES[appState.mode].lead.type;
       fillAttributionFields();
       feedback.textContent = "Дякуємо, ми отримали заявку й скоро з вами зв'яжемося.";
-      window.location.assign("/thank-you.html");
+      const thankMode = payload.mode === "conditioners" ? "conditioners" : "windows";
+      window.location.assign(`/thank-you.html?mode=${thankMode}`);
     } catch (error) {
       const draftKey = "comfort-climate-lead-backup";
       const draftList = JSON.parse(window.localStorage.getItem(draftKey) || "[]");

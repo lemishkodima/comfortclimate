@@ -18,19 +18,40 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="/styles.css" />
     <script>
+      function resolveThankMode() {
+        const queryMode = new URLSearchParams(window.location.search).get("mode");
+        if (queryMode === "conditioners" || queryMode === "windows") return queryMode;
+
+        try {
+          const savedMode = window.localStorage.getItem("comfort-climate-mode");
+          if (savedMode === "conditioners" || savedMode === "windows") return savedMode;
+        } catch (error) {
+          // Ignore storage issues.
+        }
+
+        return document.referrer.includes("/conditioners") ? "conditioners" : "windows";
+      }
+
+      window.__thankPageMode = resolveThankMode();
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
         event: "lead_thank_you",
-        page_type: "thank_you"
+        page_type: "thank_you",
+        mode: window.__thankPageMode
       });
     </script>
   </head>
   <body data-page-mode="windows" class="mode-windows">
+    <script>
+      document.body.dataset.pageMode = window.__thankPageMode;
+      document.body.classList.remove("mode-windows", "mode-conditioners");
+      document.body.classList.add(`mode-${window.__thankPageMode}`);
+    </script>
     <main class="thank-page">
       <section class="thank-card">
-        <img class="thank-logo" src="./assets/img/logo.svg?v=20260724-readable-tagline" alt="Dimkomfortu" />
+        <img class="thank-logo" src="/assets/img/logo.svg?v=20260724-readable-tagline" alt="Dimkomfortu" />
         <p class="section-label thank-status">
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M20 6 9 17l-5-5" />
@@ -46,11 +67,17 @@
           Дякуємо, що обрали «Дім Комфорту»!
         </p>
         <div class="thank-actions">
-          <a class="cta-button" href="./index.html">
+          <a class="cta-button" href="/" data-thank-return>
             <span class="button-label">Повернутися на сайт</span>
           </a>
         </div>
       </section>
     </main>
+    <script>
+      const thankReturnLink = document.querySelector("[data-thank-return]");
+      if (thankReturnLink) {
+        thankReturnLink.setAttribute("href", window.__thankPageMode === "conditioners" ? "/conditioners/" : "/");
+      }
+    </script>
   </body>
 </html>
