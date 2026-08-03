@@ -210,22 +210,22 @@ img {
 }
 
 body.mode-conditioners .promo-topbar {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.1);
-  border-bottom: 1px solid rgba(111, 16, 32, 0.16);
-  box-shadow: 0 10px 26px rgba(111, 16, 32, 0.08);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent) 18%, transparent);
+  box-shadow: 0 10px 26px rgba(32, 84, 164, 0.08);
   backdrop-filter: blur(18px);
 }
 
 body.mode-conditioners .promo-topbar strong {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.14);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 14%, white);
 }
 
 body.mode-conditioners .promo-topbar__cta {
   color: #fff;
-  background: linear-gradient(135deg, #8f1b2c, #5e0d1b);
-  border-color: rgba(111, 16, 32, 0.25);
+  background: linear-gradient(135deg, var(--cta-start), var(--cta-end));
+  border-color: color-mix(in srgb, var(--accent) 24%, white);
 }
 
 @keyframes topbarCtaPulse {
@@ -678,7 +678,7 @@ body.mode-windows #hero-secondary {
   z-index: 0;
   background:
     linear-gradient(180deg, var(--hero-overlay-top), var(--hero-overlay-bottom)),
-    url("./assets/img/optimized/pexels-canshotz-36406089.webp") center 28% / cover no-repeat;
+    url("/assets/img/optimized/pexels-canshotz-36406089.webp") center 28% / cover no-repeat;
   opacity: 0;
   transition: opacity 220ms ease;
   pointer-events: none;
@@ -896,18 +896,18 @@ body.mode-conditioners .hero-copy h1 {
 }
 
 body.mode-conditioners .hero-discount-stamp {
-  border-color: rgba(111, 16, 32, 0.5);
-  background: rgba(255, 248, 248, 0.95);
+  border-color: color-mix(in srgb, var(--accent) 58%, white);
+  background: rgba(246, 250, 255, 0.96);
 }
 
 body.mode-conditioners .hero-discount-stamp__badge {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.12);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 14%, white);
 }
 
 body.mode-conditioners .hero-discount-stamp__timer {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.12);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 12%, white);
 }
 
 .hero-image-card__media {
@@ -1047,8 +1047,8 @@ body.mode-conditioners .hero-discount-stamp__timer {
 }
 
 body.mode-conditioners .promo-badge {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.12);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 14%, white);
 }
 
 .promo-copy h2 {
@@ -1081,14 +1081,14 @@ body.mode-conditioners .promo-badge {
 }
 
 body.mode-conditioners .promo-timer {
-  color: #6f1020;
-  background: rgba(111, 16, 32, 0.1);
-  border-color: rgba(111, 16, 32, 0.16);
+  color: var(--dark);
+  background: color-mix(in srgb, var(--accent) 10%, white);
+  border-color: color-mix(in srgb, var(--accent) 18%, transparent);
 }
 
 body.mode-conditioners .promo-timer span,
 body.mode-conditioners .promo-timer strong {
-  color: #6f1020;
+  color: var(--dark);
 }
 
 .promo-timer span {
@@ -1182,7 +1182,7 @@ body.mode-conditioners .promo-timer strong {
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
-  background: rgba(111, 16, 32, 0.08);
+  background: var(--accent-soft);
   border: 3px solid rgba(255, 255, 255, 0.86);
   box-shadow: 0 18px 34px rgba(17, 43, 89, 0.14);
 }
@@ -1936,7 +1936,7 @@ body.chooser-open.chooser-selecting .site-header {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   background: #0e1c37;
   overflow: hidden;
-  --chooser-reveal-image: url("./assets/img/optimized/pexels-canshotz-36406089.webp");
+  --chooser-reveal-image: url("/assets/img/optimized/pexels-canshotz-36406089.webp");
   opacity: 1;
   transition: opacity 380ms ease-out;
 }

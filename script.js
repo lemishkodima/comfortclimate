@@ -136,7 +136,7 @@ const MODES = {
         ["qualityParts", "Якісні комплектуючі"]
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "./assets/img/optimized/pexels-kseniachernaya-5691531.webp",
+      image: "/assets/img/optimized/pexels-kseniachernaya-5691531.webp",
       imageAlt: "Майстер виконує монтаж та налаштування вікна",
       mediaTag: "Реальні роботи"
     },
@@ -150,10 +150,10 @@ const MODES = {
       cta: "Отримати знижку"
     },
     services: [
-      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "./assets/img/services/window-service.webp"],
-      ["panel", "Заміна склопакетів", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт.", "./assets/img/services/glass-replacement.webp"],
-      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "./assets/img/services/window-replacement.webp"],
-      ["tools", "Ремонт вікон", "Усуваємо продування, регулюємо фурнітуру та повертаємо вікнам тиху роботу.", "./assets/img/services/window-repair.webp"]
+      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "/assets/img/services/window-service.webp"],
+      ["panel", "Заміна склопакетів", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт.", "/assets/img/services/glass-replacement.webp"],
+      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "/assets/img/services/window-replacement.webp"],
+      ["tools", "Ремонт вікон", "Усуваємо продування, регулюємо фурнітуру та повертаємо вікнам тиху роботу.", "/assets/img/services/window-repair.webp"]
     ],
     why: {
       label: "Чому ми",
@@ -166,7 +166,7 @@ const MODES = {
         "Чиста робота та післямонтажна підтримка."
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "./assets/img/optimized/window-why.webp",
+      image: "/assets/img/optimized/window-why.webp",
       imageAlt: "Металопластикове вікно в інтер'єрі"
     },
     reviews: {
@@ -234,8 +234,8 @@ const MODES = {
   },
   conditioners: {
     accentClass: "mode-conditioners",
-    title: "Швидкий сервіс вікон та кондиціонерів у Києві під ключ",
-    description: "Ремонт, регулювання, заміна ущільнювача та фурнітури пластикових вікон ● Монтаж, чистка й обслуговування кондиціонерів ● Київ та область ● Швидкий виїзд майстра ● Гарантія якості.",
+    title: "Монтаж і сервіс кондиціонерів у Києві | Dimkomfortu",
+    description: "Монтаж, чистка й обслуговування кондиціонерів у Києві та області ● Підбір обладнання ● Швидкий виїзд майстра ● Гарантія якості.",
     hero: {
       eyebrow: "Прохолода. Комфорт. Спокій.",
       title: "Професійний монтаж та сервіс кондиціонерів",
@@ -250,7 +250,7 @@ const MODES = {
         ["signature", "Гарантія на роботи"]
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "./assets/img/optimized/ac-garden.webp",
+      image: "/assets/img/optimized/ac-garden.webp",
       imageAlt: "Кондиціонер біля зони відпочинку",
       mediaTag: "Київ та область"
     },
@@ -264,10 +264,10 @@ const MODES = {
       cta: "Забрати пропозицію"
     },
     services: [
-      ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність.", "./assets/img/services/equipment-sales.webp"],
-      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання.", "./assets/img/services/ac-installation.webp"],
-      ["settings", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи.", "./assets/img/services/ac-service.webp"],
-      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності.", "./assets/img/services/ac-cleaning.webp"]
+      ["package", "Продаж обладнання", "Підберемо кондиціонер під приміщення, бюджет і потрібну потужність.", "/assets/img/services/equipment-sales.webp"],
+      ["tools", "Монтаж", "Підбір і монтаж кондиціонерів під ваші потреби та сценарій використання.", "/assets/img/services/ac-installation.webp"],
+      ["settings", "Обслуговування", "Регулярний сервіс для стабільної та тихої роботи.", "/assets/img/services/ac-service.webp"],
+      ["fan", "Чистка", "Глибока чистка для кращої якості повітря та продуктивності.", "/assets/img/services/ac-cleaning.webp"]
     ],
     why: {
       label: "Чому ми",
@@ -281,7 +281,7 @@ const MODES = {
         "Сервіс та підтримка після встановлення"
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "./assets/img/optimized/ac-outdoor.webp",
+      image: "/assets/img/optimized/ac-outdoor.webp",
       imageAlt: "Зовнішній блок кондиціонера"
     },
     reviews: {
@@ -352,8 +352,8 @@ const appState = {
   mode: "windows"
 };
 
-const LOGO_DESKTOP_SRC = "./assets/img/logo.svg?v=20260724-readable-tagline";
-const LOGO_PHONE_SRC = "./assets/img/logo-phone.svg?v=20260724-compact-phone-logo";
+const LOGO_DESKTOP_SRC = "/assets/img/logo.svg?v=20260724-readable-tagline";
+const LOGO_PHONE_SRC = "/assets/img/logo-phone.svg?v=20260724-compact-phone-logo";
 const PHONE_LOGO_QUERY = window.matchMedia("(max-width: 560px)");
 const KYIV_DISTRICTS = [
   "Голосіївський",
@@ -443,6 +443,11 @@ function getQueryMode() {
   return mode === "windows" || mode === "conditioners" ? mode : null;
 }
 
+function getPageMode() {
+  const mode = document.body.dataset.pageMode;
+  return mode === "windows" || mode === "conditioners" ? mode : null;
+}
+
 function getStoredMode() {
   const saved = window.localStorage.getItem("comfort-climate-mode");
   return saved === "windows" || saved === "conditioners" ? saved : null;
@@ -468,16 +473,22 @@ function toggleMobileMenu() {
 
 function setMeta(mode) {
   const config = MODES[mode];
+  const canonical = document.querySelector('link[rel="canonical"]');
+  const path = mode === "conditioners" ? "/conditioners/" : "/";
   document.title = config.title;
   document.querySelector('meta[name="description"]').setAttribute("content", config.description);
   document.querySelector('meta[property="og:title"]').setAttribute("content", config.title);
   document.querySelector('meta[property="og:description"]').setAttribute("content", config.description);
+  canonical?.setAttribute("href", `https://www.dimkomfortu.kyiv.ua${path}`);
 }
 
-function updateUrl(mode) {
+function updateUrl(mode, origin = "direct") {
   if (!supportsHistory) return;
+  if (origin === "initial") return;
+
   const url = new URL(window.location.href);
-  url.searchParams.set("mode", mode);
+  url.pathname = mode === "conditioners" ? "/conditioners/" : "/";
+  url.searchParams.delete("mode");
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
 }
 
@@ -800,7 +811,7 @@ function applyMode(mode, origin = "direct") {
   renderLead(mode);
   updateLogos(mode);
   setMeta(mode);
-  updateUrl(mode);
+  updateUrl(mode, origin);
 
   document.querySelectorAll(".mode-switch__button").forEach((button) => {
     button.setAttribute("aria-pressed", String(button.dataset.mode === mode));
@@ -892,7 +903,7 @@ function scrollToTarget(targetSelector) {
 
 async function submitLead(payload) {
   try {
-    const response = await fetch("./api/lead", {
+    const response = await fetch("/api/lead", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload)
@@ -1009,7 +1020,7 @@ function initInteractions() {
       qs("#lead-type").value = MODES[appState.mode].lead.type;
       fillAttributionFields();
       feedback.textContent = "Дякуємо, ми отримали заявку й скоро з вами зв'яжемося.";
-      window.location.assign("./thank-you.html");
+      window.location.assign("/thank-you.html");
     } catch (error) {
       const draftKey = "comfort-climate-lead-backup";
       const draftList = JSON.parse(window.localStorage.getItem(draftKey) || "[]");
@@ -1090,10 +1101,12 @@ function init() {
   initInteractions();
   initPromoTimer();
   const directMode = getQueryMode();
-  const preferredMode = directMode || getStoredMode() || "windows";
-  applyMode(preferredMode);
+  const pageMode = getPageMode();
+  const preferredMode = directMode || pageMode || getStoredMode() || "windows";
+  const modeOrigin = directMode ? "direct" : pageMode ? "fixed" : "initial";
+  applyMode(preferredMode, modeOrigin);
 
-  if (directMode) {
+  if (directMode || pageMode) {
     hideModeChooser();
     return;
   }
