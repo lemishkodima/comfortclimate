@@ -1779,8 +1779,8 @@ body.mode-conditioners .promo-timer strong {
 }
 
 .thank-card {
-  width: min(100%, 780px);
-  padding: clamp(28px, 4vw, 44px);
+  width: min(100%, 760px);
+  padding: clamp(34px, 4.8vw, 54px);
   border-radius: 30px;
   background: color-mix(in srgb, var(--surface) 94%, white);
   border: 1px solid var(--surface-line);
@@ -1789,105 +1789,73 @@ body.mode-conditioners .promo-timer strong {
 }
 
 .thank-logo {
-  width: min(248px, 68vw);
+  width: min(330px, 76vw);
   height: auto;
-  margin: 0 auto 24px;
+  margin: 0 auto 22px;
   filter: var(--brand-logo-tone) var(--brand-logo-glow);
 }
 
+.thank-card .thank-status {
+  align-items: center;
+  gap: 10px;
+  margin: 0 auto 10px;
+  padding: 8px 18px;
+  color: #2f5d36;
+  background: #e9f7e8;
+  border-color: rgba(47, 93, 54, 0.16);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.62);
+}
+
+.thank-card .thank-status svg {
+  width: 22px;
+  height: 22px;
+  padding: 3px;
+  border-radius: 50%;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(47, 93, 54, 0.22);
+}
+
 .thank-card h1 {
-  max-width: 13ch;
-  margin: 0 auto 18px;
+  max-width: none;
+  margin: 0 auto 14px;
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 5.6vw, 3.6rem);
-  line-height: 1;
+  font-size: clamp(2.1rem, 4.2vw, 3.15rem);
+  line-height: 1.05;
 }
 
 .thank-card p {
   margin: 0 auto;
-  max-width: 48ch;
+  max-width: 36ch;
   color: var(--muted);
+  font-size: 1.08rem;
   line-height: 1.65;
-}
-
-.thank-next {
-  max-width: 610px;
-  margin: 28px auto 0;
-  padding: 18px;
-  border-radius: 24px;
-  background: color-mix(in srgb, var(--surface-soft) 74%, white);
-  border: 1px solid var(--surface-line);
-  text-align: left;
-}
-
-.thank-next h2 {
-  margin: 0 0 14px;
-  font-family: var(--font-display);
-  font-size: 1.05rem;
-  line-height: 1.15;
-}
-
-.thank-steps {
-  display: grid;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.thank-steps li {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  align-items: center;
-  gap: 12px;
-}
-
-.thank-steps span {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  color: #fff;
-  background: linear-gradient(135deg, var(--cta-start), var(--cta-end));
-  font-weight: 800;
-  line-height: 1;
-}
-
-.thank-steps p {
-  max-width: none;
-  margin: 0;
-  color: var(--text);
-  line-height: 1.35;
 }
 
 .thank-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   gap: 12px;
-  margin-top: 28px;
+  margin-top: 26px;
+}
+
+.thank-actions .cta-button {
+  width: min(100%, 300px);
 }
 
 .thank-actions .thank-phone {
-  flex-direction: column;
-  gap: 2px;
-  min-width: 208px;
-  padding: 12px 18px;
+  width: min(100%, 240px);
+  padding: 14px 18px;
   color: var(--text);
   background: var(--surface-soft);
   border: 1px solid var(--surface-line);
-}
-
-.thank-actions .thank-phone span {
-  color: var(--muted);
-  font-size: 0.8rem;
-  font-weight: 700;
-}
-
-.thank-actions .thank-phone strong {
-  font-size: 1.05rem;
+  font-size: 1.12rem;
   font-variant-numeric: tabular-nums;
   font-feature-settings: "tnum";
 }
