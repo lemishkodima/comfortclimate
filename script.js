@@ -1009,6 +1009,7 @@ function initInteractions() {
       qs("#lead-type").value = MODES[appState.mode].lead.type;
       fillAttributionFields();
       feedback.textContent = "Дякуємо, ми отримали заявку й скоро з вами зв'яжемося.";
+      window.location.assign("./thank-you.html");
     } catch (error) {
       const draftKey = "comfort-climate-lead-backup";
       const draftList = JSON.parse(window.localStorage.getItem(draftKey) || "[]");
