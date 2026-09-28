@@ -949,6 +949,21 @@ function initInteractions() {
     const switchButton = event.target.closest(".mode-switch__button");
     if (switchButton) {
       closeMobileMenu();
+
+      // Keep direct URLs for sharing and SEO, but render same-origin switches
+      // in place so the browser does not flash a second document.
+      const href = switchButton.getAttribute("href");
+      if (href) {
+        const target = new URL(href, window.location.href);
+        if (target.origin === window.location.origin) {
+          event.preventDefault();
+          if (switchButton.dataset.mode !== appState.mode) {
+            applyMode(switchButton.dataset.mode, "switch");
+          }
+        }
+        return;
+      }
+
       applyMode(switchButton.dataset.mode, "switch");
       return;
     }
@@ -977,6 +992,19 @@ function initInteractions() {
     const chooserButton = event.target.closest("[data-choose-mode]");
     if (chooserButton) {
       const nextMode = chooserButton.dataset.chooseMode;
+      const href = chooserButton.getAttribute("href");
+      if (href) {
+        const target = new URL(href, window.location.href);
+        if (target.origin === window.location.origin) {
+          event.preventDefault();
+          if (nextMode !== appState.mode) {
+            applyMode(nextMode, "switch");
+          }
+          hideModeChooser(nextMode);
+          return;
+        }
+      }
+
       applyMode(nextMode, "switch");
       hideModeChooser(nextMode);
       return;
@@ -1116,10 +1144,12 @@ function init() {
 
   if (directMode || pageMode) {
     hideModeChooser();
+    document.documentElement.classList.add("js-ready");
     return;
   }
 
   showModeChooser();
+  document.documentElement.classList.add("js-ready");
 }
 
 document.addEventListener("DOMContentLoaded", init);

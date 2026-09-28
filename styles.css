@@ -111,6 +111,13 @@ html {
   overflow-x: clip;
 }
 
+/* Prevent the empty HTML shell from flashing before the first render. */
+html:not(.js-ready) .page-flip-target,
+html:not(.js-ready) .mode-chooser {
+  opacity: 0;
+  visibility: hidden;
+}
+
 body {
   margin: 0;
   font-family: var(--font-body);
