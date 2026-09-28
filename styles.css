@@ -317,6 +317,7 @@ body.mode-conditioners .promo-topbar__cta {
   padding: 11px 18px;
   border-radius: 999px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .mode-switch__button[aria-pressed="true"] {
@@ -1972,6 +1973,7 @@ body.chooser-open.chooser-selecting .site-header {
   padding: 0;
   background: transparent;
   overflow: hidden;
+  text-decoration: none;
 }
 
 .chooser-half img,

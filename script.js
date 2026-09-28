@@ -448,6 +448,13 @@ function getPageMode() {
   return mode === "windows" || mode === "conditioners" ? mode : null;
 }
 
+function getPathMode() {
+  const path = window.location.pathname.replace(/\/+$/, "");
+  if (path === "/windows") return "windows";
+  if (path === "/conditioners") return "conditioners";
+  return null;
+}
+
 function getStoredMode() {
   const saved = window.localStorage.getItem("comfort-climate-mode");
   return saved === "windows" || saved === "conditioners" ? saved : null;
@@ -474,7 +481,7 @@ function toggleMobileMenu() {
 function setMeta(mode) {
   const config = MODES[mode];
   const canonical = document.querySelector('link[rel="canonical"]');
-  const path = mode === "conditioners" ? "/conditioners/" : "/";
+  const path = mode === "conditioners" ? "/conditioners/" : "/windows/";
   document.title = config.title;
   document.querySelector('meta[name="description"]').setAttribute("content", config.description);
   document.querySelector('meta[property="og:title"]').setAttribute("content", config.title);
@@ -487,7 +494,7 @@ function updateUrl(mode, origin = "direct") {
   if (origin === "initial") return;
 
   const url = new URL(window.location.href);
-  url.pathname = mode === "conditioners" ? "/conditioners/" : "/";
+  url.pathname = mode === "conditioners" ? "/conditioners/" : "/windows/";
   url.searchParams.delete("mode");
   window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
 }
@@ -1101,7 +1108,7 @@ function init() {
   initChooserInteractions();
   initInteractions();
   initPromoTimer();
-  const directMode = getQueryMode();
+  const directMode = getQueryMode() || getPathMode();
   const pageMode = getPageMode();
   const preferredMode = directMode || pageMode || getStoredMode() || "windows";
   const modeOrigin = directMode ? "direct" : pageMode ? "fixed" : "initial";
