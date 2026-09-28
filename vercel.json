@@ -1,7 +1,4 @@
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "framework": null,
-  "buildCommand": null,
   "functions": {
     "api/lead.js": {
       "runtime": "@vercel/node@3.2.24"
