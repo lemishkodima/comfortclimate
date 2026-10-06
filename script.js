@@ -854,6 +854,38 @@ function consentUpdate(status) {
   });
 }
 
+function gtag_report_conversion(url) {
+  let completed = false;
+  const callback = () => {
+    if (completed) return;
+    completed = true;
+
+    if (typeof url !== "undefined") {
+      window.location = url;
+    }
+  };
+
+  if (typeof window.gtag !== "function") {
+    callback();
+    return false;
+  }
+
+  window.gtag("event", "conversion", {
+    send_to: "AW-18316274982/c9C-COWNuJMdEKba8J1E",
+    transaction_id: "",
+    event_callback: callback,
+    event_timeout: 1500
+  });
+
+  // Continue the user action if an ad blocker or a slow network prevents
+  // Google's callback from firing.
+  if (typeof url !== "undefined") {
+    window.setTimeout(callback, 1600);
+  }
+
+  return false;
+}
+
 function initConsent() {
   const banner = qs("#cookie-banner");
   if (!banner) return;
@@ -982,6 +1014,9 @@ function initInteractions() {
         source: "phone",
         operator: phoneLink.dataset.phoneOperator || "unknown"
       });
+      event.preventDefault();
+      gtag_report_conversion(phoneLink.href);
+      return;
     }
 
     const navLink = event.target.closest(".site-nav a");
@@ -1056,7 +1091,7 @@ function initInteractions() {
       fillAttributionFields();
       feedback.textContent = "Дякуємо, ми отримали заявку й скоро з вами зв'яжемося.";
       const thankMode = payload.mode === "conditioners" ? "conditioners" : "windows";
-      window.location.assign(`/thank-you.html?mode=${thankMode}`);
+      gtag_report_conversion(`/thank-you.html?mode=${thankMode}`);
     } catch (error) {
       const draftKey = "comfort-climate-lead-backup";
       const draftList = JSON.parse(window.localStorage.getItem(draftKey) || "[]");
