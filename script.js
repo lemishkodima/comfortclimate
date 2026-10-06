@@ -1014,9 +1014,6 @@ function initInteractions() {
         source: "phone",
         operator: phoneLink.dataset.phoneOperator || "unknown"
       });
-      event.preventDefault();
-      gtag_report_conversion(phoneLink.href);
-      return;
     }
 
     const navLink = event.target.closest(".site-nav a");
@@ -1091,7 +1088,13 @@ function initInteractions() {
       fillAttributionFields();
       feedback.textContent = "Дякуємо, ми отримали заявку й скоро з вами зв'яжемося.";
       const thankMode = payload.mode === "conditioners" ? "conditioners" : "windows";
-      gtag_report_conversion(`/thank-you.html?mode=${thankMode}`);
+      const thankUrl = `/thank-you.html?mode=${thankMode}`;
+
+      if (thankMode === "windows") {
+        gtag_report_conversion(thankUrl);
+      } else {
+        window.location.assign(thankUrl);
+      }
     } catch (error) {
       const draftKey = "comfort-climate-lead-backup";
       const draftList = JSON.parse(window.localStorage.getItem(draftKey) || "[]");
