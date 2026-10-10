@@ -150,9 +150,9 @@ const MODES = {
       cta: "Отримати знижку"
     },
     services: [
-      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "/assets/img/services/window-seal-service.webp"],
+      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "/assets/img/optimized/window-worker-drill.webp"],
       ["panel", "Заміна склопакетів", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт.", "/assets/img/services/window-installation.webp"],
-      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "/assets/img/optimized/window-worker-drill.webp"],
+      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "/assets/img/services/window-seal-service.webp"],
       ["tools", "Ремонт вікон", "Усуваємо продування, регулюємо фурнітуру та повертаємо вікнам тиху роботу.", "/assets/img/services/window-cleaning.webp"]
     ],
     why: {
