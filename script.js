@@ -136,8 +136,8 @@ const MODES = {
         ["qualityParts", "Якісні комплектуючі"]
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "/assets/img/optimized/pexels-kseniachernaya-5691531.webp",
-      imageAlt: "Майстер виконує монтаж та налаштування вікна",
+      image: "/assets/img/optimized/window-worker-drill.webp",
+      imageAlt: "Майстер регулює фурнітуру пластикового вікна",
       mediaTag: "Реальні роботи"
     },
     servicesTitle: "Наші послуги",
@@ -150,10 +150,10 @@ const MODES = {
       cta: "Отримати знижку"
     },
     services: [
-      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "/assets/img/services/window-service.webp"],
-      ["panel", "Заміна склопакетів", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт.", "/assets/img/services/glass-replacement.webp"],
-      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "/assets/img/services/window-replacement.webp"],
-      ["tools", "Ремонт вікон", "Усуваємо продування, регулюємо фурнітуру та повертаємо вікнам тиху роботу.", "/assets/img/services/window-repair.webp"]
+      ["settings", "Обслуговування вікон", "Ремонт, регулювання, ущільнення та профілактика механізмів.", "/assets/img/services/window-seal-service.webp"],
+      ["panel", "Заміна склопакетів", "Підберемо новий склопакет і акуратно замінимо без зайвих робіт.", "/assets/img/services/window-installation.webp"],
+      ["window", "Заміна вікон", "Металопластикові системи для квартир, будинків і комерційних приміщень.", "/assets/img/optimized/window-worker-drill.webp"],
+      ["tools", "Ремонт вікон", "Усуваємо продування, регулюємо фурнітуру та повертаємо вікнам тиху роботу.", "/assets/img/services/window-cleaning.webp"]
     ],
     why: {
       label: "Чому ми",
@@ -166,8 +166,8 @@ const MODES = {
         "Чиста робота та післямонтажна підтримка."
       ],
       orbitText: "dimkomfortu • dimkomfortu • dimkomfortu • dimkomfortu • ",
-      image: "/assets/img/optimized/window-why.webp",
-      imageAlt: "Металопластикове вікно в інтер'єрі"
+      image: "/assets/img/services/window-installation.webp",
+      imageAlt: "Майстер встановлює стулку пластикового вікна"
     },
     reviews: {
       title: "Що говорять клієнти про вікна",
